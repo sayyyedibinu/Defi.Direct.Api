@@ -1,0 +1,70 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: defi-directui-qa
+  labels:
+    app: defi-directui
+    tier: api
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      name: http
+    - port: 443
+      targetPort: 443
+      name: https
+  selector:
+    app: defi-directui
+    tier: api
+  type: NodePort
+  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: defi-directui-qa
+  labels:
+    app: defi-directui
+    tier: api
+    sourceBuildId: {{BRANCH_NAME_LOWERCASE}}-{{BUILD_NUMBER}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: defi-directui
+      tier: api
+  strategy:
+    type: RollingUpdate
+  progressDeadlineSeconds: 300
+  revisionHistoryLimit: 3
+  template:
+    metadata:
+      labels:
+        app: defi-directui
+        tier: api
+        sourceBuildId: {{BRANCH_NAME_LOWERCASE}}-{{BUILD_NUMBER}}
+    spec:
+      dnsPolicy: ClusterFirst
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
+          - name: single-request-reopen
+      containers:
+      - image: 680054776144.dkr.ecr.us-east-1.amazonaws.com/defi-apps-directui:{{BRANCH_NAME_LOWERCASE}}-{{BUILD_NUMBER}}.ui
+        name: defi-directui-qa
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "300Mi"
+            cpu: "500m"
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "qa"
+        ports:
+        - containerPort: 80
+          name: http
+        - containerPort: 443
+          name: https

@@ -1,0 +1,20 @@
+{
+    "Statement" : [
+      {
+        "Effect" : "Deny",
+        "Action" : ["Update:Replace", "Update:Delete"],
+        "Principal": "*",
+        "Condition" : {
+            "StringEquals" : {
+              "ResourceType" : ["AWS::ECR::Repository"]
+            }
+          }
+      },
+      {
+        "Effect" : "Allow",
+        "Action" : "Update:Modify",
+        "Principal": "*",
+        "Resource" : "*"
+      }
+    ]
+  }

@@ -1,0 +1,48 @@
+/*@font-face {
+    font-family: 'inter_uiregular';
+    src: url('./assets/fonts/Inter-UI-Regular/Inter-UI-Regular.woff2') format('woff2'),
+         url('./assets/fonts/Inter-UI-Regular/Inter-UI-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'inter_uiregular';
+}*/
+
+.errorMessage{
+    color: #d50000;
+}
+.alignCenter{
+    text-align: center;
+}
+
+.item-loader{
+    color: #00B2E3;   
+}
+.required{
+    color: #DB5E5E !important;
+}
+.appPrimaryClr{
+    color: #00B3E3 !important;
+}
+.appPrimaryBGClr{
+    background-color: #00B3E3 !important;
+}
+.appSecondaryClr{
+    color: #6ABF4B !important;
+}
+.appSecondaryBGClr{
+    background-color: #6ABF4B !important;
+}
+
+.scrollableModal{
+    height: 100vh !important;
+    overflow: auto !important;
+}
+.top15px{
+    margin-top: 15px !important;
+}

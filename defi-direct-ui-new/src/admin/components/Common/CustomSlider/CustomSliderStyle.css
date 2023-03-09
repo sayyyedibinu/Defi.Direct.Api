@@ -1,0 +1,22 @@
+.sliderInfoCnt {
+    width: 100%;
+    margin-left: 8px;
+    margin-top: -10px;
+    position: relative;
+}
+.sliderInfoCnt span{
+    color: #646569 !important;
+    font-size: 12px !important;
+}
+.sliderMinValue {
+    float: left;
+}
+
+.sliderCurrentValue {
+    text-align: center;
+    position: absolute
+}
+
+.sliderMaxValue {
+    float: right;
+}

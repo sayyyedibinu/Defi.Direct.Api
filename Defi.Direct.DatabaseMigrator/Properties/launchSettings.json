@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Defi.Direct.DatabaseMigrator": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

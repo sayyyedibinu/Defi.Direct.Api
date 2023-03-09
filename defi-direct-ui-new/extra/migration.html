@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    This page is used to migration.
+</body>
+
+<script>
+    getSiteList();
+    function getSiteList(){
+        $.get("https://api-qa.defidirect.com/api/Sites", function(data, status){
+            for(var i = 0; i < data.length; i++) getSiteById(data[i].id)
+        });
+    }
+    
+    function getSiteById(id){
+        $.get("https://api-qa.defidirect.com/api/Sites/"+id, function(data, status){
+            migrationLogic(data);
+        });
+    }
+    
+    function migrationLogic(data){
+        for(var i = 0; i < data.site.fieldData.length; i++){
+            for(var j = 0; j < data.site.fieldData[i].fields.length; j++){
+                if(Object.prototype.toString.call(data.site.fieldData[i].fields[j]) === '[object Object]')
+                    data.site.fieldData[i].fields[j] = [data.site.fieldData[i].fields[j]];
+            }
+        }
+        postSite(data)
+    }
+    
+    function postSite(data){
+        /*remove return statment if you want to save the changes.*/
+       return;
+        
+        $.ajax({
+            type: 'POST',
+            url: "https://api-qa.defidirect.com/api/Sites",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            data: JSON.stringify(data),
+            success: function(msg) {
+                console.log(msg);
+            }
+        });
+    }
+    
+
+</script>
+
+</html>

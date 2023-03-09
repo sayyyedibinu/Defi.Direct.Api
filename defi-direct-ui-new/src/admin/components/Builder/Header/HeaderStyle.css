@@ -1,0 +1,153 @@
+.builder-appBar {
+    background: #FFF !important;
+    color: #969798 !important;
+    /*border: 1px solid red;*/
+}
+
+.appToolbar {
+    position: relative;
+}
+
+.appToolbar .appLogo {
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+    top: 0;
+    height: 63px;
+    /*left: 24px;*/
+    /*border-right: 3px solid #E8E8E8;*/
+}
+
+.appToolbar .appLogo img {
+    margin-top: 11px;
+}
+
+.pagesDropdown {
+    display: inline-block;
+    position: absolute;
+    left: 190px;
+    min-width: 160px;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+}
+
+.pagesDropdown a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pagesDropdown .pagesDropdownBox {
+    width: 115px;
+    text-transform: capitalize;
+    background-color: inherit;
+}
+
+.pagesDropdownBox .pagesDropdownBoxItems {
+    text-transform: capitalize !important;
+}
+
+.pagesDropdown ._pages {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+._pages.selected {
+    border-bottom: 3px solid #f5bd47;
+
+}
+
+.centerMenuItems {
+    display: inline-block;
+    min-width: 165;
+    height: 63px;
+    margin: auto;
+    text-align: center;
+    padding-left: 110px;
+}
+
+.centerMenuItems .disabled {
+    pointer-events: none;
+}
+
+.centerMenuItems span {
+    width: 55px;
+    height: 100%;
+    display: inline-block;
+    border-left: 1px solid #CCCCCB;
+    border-right: 1px solid #CCCCCB;
+    cursor: pointer;
+}
+
+.centerMenuItems span.selected {
+    background: #F1FAFE;
+}
+
+.centerMenuItems span i {
+    color: #98999A;
+    opacity: .5;
+    font-size: 28px;
+    margin-top: 15px;
+}
+
+.centerMenuItems span:hover i,
+.centerMenuItems span i.selected {
+    color: #00B2E3;
+    opacity: 1;
+}
+
+.rightMenuItems {
+    right: 0;
+    top: 0;
+    height: 63px;
+    position: absolute;
+    display: inline-block;
+}
+
+.rightMenuItems2 {
+    right: 50px;
+    top: 0;
+    height: 63px;
+    position: absolute;
+    display: inline-block;
+}
+
+.rightMenuItems2 span {
+    border-left: 1px solid #CCCCCB;
+}
+
+.rightMenuItems span {
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    display: inline-block;
+    border-left: 1px solid #CCCCCB;
+    cursor: pointer;
+}
+
+.rightMenuItems span i {
+    color: #98999A;
+    opacity: .5;
+    font-size: 25px;
+    margin-top: 18px;
+}
+
+.rightMenuItems span:hover i {
+    color: #00B2E3;
+    opacity: 1;
+}
+
+.selectedPage {
+    background: gray !important;
+    color: #fff !important;
+}
+
+.builder-appBar .builderPageTitle{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: inherit;
+    max-height: 30px;
+    display: inline-block;
+}

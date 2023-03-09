@@ -1,0 +1,9 @@
+.footerContainer{
+    text-align: center;
+    padding: 5px;
+    /*max-height: 125px;
+    overflow: auto;*/
+}
+.footerContainer p{
+    min-height: 10px;
+}

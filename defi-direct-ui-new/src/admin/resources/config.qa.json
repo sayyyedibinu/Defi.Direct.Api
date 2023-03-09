@@ -1,0 +1,15 @@
+{
+    "API_BASE_URL": "https://api-qa.defidirect.com/api/",
+    "AUTH_URL": "https://api-qa.defidirect.com/connect/token",
+    "IMG_BASE_URL": "./assets/img/",
+    
+    "Text_color": "#969798",
+    "color1": "#fff",
+    "color2": "#4EB0DE",
+    "loaderColor": "#00B2E3",
+    
+    "defaultPrimaryClr": "#00B3E3",
+    "defaultSecondaryClr": "#5ca741",
+    
+    "localStorageLimit": 1000000
+}

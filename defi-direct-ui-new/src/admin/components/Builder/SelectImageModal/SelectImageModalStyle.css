@@ -1,0 +1,216 @@
+.SIM-Wrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 50px !important;
+}
+
+.SIM-Container {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.SIM-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.SIM-CloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.SIM-Header {
+    margin-bottom: 8px;
+    margin-top: 24px;
+    text-align: center;
+    color: #646569;
+}
+
+.createModalHeader2 {
+    margin: 0;
+    font-size: 14px;
+    color: #969798;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createModalTitleBox {
+    padding: 25px 50px;
+}
+
+.createModalTitleBox label,
+.createModalTitleBox input {
+    color: #969798;
+    font-size: 18px;
+}
+
+.createModalTitleBox input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px
+}
+
+.SIM-Footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.SIM-Footer button {
+    min-height: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.SIM-Footer .deleteBtn {
+    background-color: #DB5E5E;
+    color: #FFF;
+}
+
+.SIM-Footer .insertBtn {
+    border-radius: 3px;
+    color: #FFF;
+    width: 145px;
+    font-size: 14px;
+}
+
+.SIM-Footer .cancelBtn {
+    background: inherit;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    box-shadow: none;
+    width: 145px;
+    font-size: 14px;
+    margin-right: 20px
+}
+
+.SIM-Footer .cancelBtn:hover {
+    
+}
+
+.SIM-Footer .insertBtn:hover {}
+
+.SIM-Footer .descTxt {
+    color: #CBCCD0;
+    font-size: 10px;
+    /* max-width: 495px; */
+    text-align: left;
+    padding-left: 53px;
+}
+
+input[type="file"] {
+    color: #CBCCD0;
+    ;
+}
+
+input[type=file] {
+    /* position: relative; */
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: border-box;
+    /* border-style:  solid; */
+    /* min-width: 350px;
+  left: 10%; */
+
+
+}
+
+input[type=file]::-webkit-file-upload-button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    width: 0;
+}
+
+/* "x::-webkit-file-upload-button" forces the rules to only apply to browsers that support this pseudo-element */
+/* x::-webkit-file-upload-button, input[type=file]:after {
+  content: 'Browse...';
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  left: -35%;
+  margin-left:3px;  
+  padding: 3px 8px 2px;
+   -webkit-appearance: button;
+  background-color: #00B2E3;;
+    color: #FFF;
+   min-height: 40px;
+    min-width: 100px;
+    border-style: solid;
+    border-radius: 10%;
+    text-transform: capitalize;
+    font-size: 16px;  
+ }  */
+
+.descTxt.error {
+    color: red;
+}
+
+/*input[type=file] {
+   position: relative;
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: border-box;  
+  overflow: hidden;
+}
+
+input[type=file]:before {
+  width: 138px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  content: 'Browse';
+  display: inline-block;
+  background: white;
+  border: 1px solid #000;
+  padding: 30 10px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+}*/
+.upload-file {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 22px;
+    border: 1px solid #969798;
+    height: 38px;
+    border-radius: 8px 0 0 9px;
+    position: relative;
+}
+
+.file-upload-input {
+    width: 100%;
+    height: 38px;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -3px;
+    border-radius: 8px 0 0 9px;
+    padding-top: 14px;
+    padding-left: 90px;
+}
+
+.file-label {
+    color: #FFF;
+    font-size: 16px;
+    position: absolute;
+    left: -1px;
+    height: 32px;
+    border-radius: 9px 0 0 9px;
+    background-color: #00B2E3;
+    top: -1px;
+    padding: 8px 10px 0 10px;
+}

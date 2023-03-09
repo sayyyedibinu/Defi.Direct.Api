@@ -1,0 +1,130 @@
+.createModalWrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 125px !important;
+}
+
+.createModalContainer {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.createModalCloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.createModalCloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.createModalHeader1,
+.createModalHeader2 {
+    text-align: center;
+}
+
+.createModalHeader1 {
+    margin-bottom: 8px;
+    margin-top: 25px;
+}
+
+.createModalHeader2 {
+    margin: 0;
+    font-size: 14px;
+    color: #969798;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createModalTitleBox {
+    padding: 25px 50px;
+}
+
+.createModalTitleBox label,
+.createModalTitleBox input {
+    color: #969798;
+    font-size: 18px;
+}
+
+.createModalTitleBox input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px
+}
+
+.addPageModalFooter {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.addPageModalFooter button {
+    min-height: 40px;
+    width: 267px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.addPageModalFooter .startBtn {
+    border-radius: 3px;
+    font-size: 14px;
+    color: #FFF;
+    width: 120px;
+    /*background-color: #00B2E3;
+    color: #FFF;*/
+}
+
+.addPageModalFooter .startBtn:hover {
+    color: #FFF !important;
+    /*background-color: #FFF;
+    color: #00B2E3;
+    border: 1px solid #00B2E3;*/
+}
+
+.addPageModalFooter .cancelBtn {
+    width: 120px;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    font-size: 14px;
+    background: #FFF;
+    margin-right: 20px;
+}
+
+.addPageModalFooter .finishBtn {
+    background-color: #FFF;
+    color: #969798;
+}
+
+.addPageModalFooter .finishBtn:hover {
+    width: 120px;
+    background-color: #969798;
+    color: #FFF;
+}
+
+.addPageModalFooter .deleteBtn {
+    background-color: #DB5E5E;
+    color: #FFF;
+    width: 120px;
+    font-size: 14px;
+}
+
+.addPageModalFooter .deleteBtn:hover {
+    background-color: #FFF;
+    color: #DB5E5E;
+    border: 1px solid #DB5E5E;
+}
+
+.displayLogicCnt {
+    padding: 0px 50px 20px 50px;
+}

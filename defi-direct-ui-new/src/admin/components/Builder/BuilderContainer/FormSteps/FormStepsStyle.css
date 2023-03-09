@@ -1,0 +1,53 @@
+.formStepListCnt{
+    padding-top: 5px !important;
+    padding-bottom: 12px !important;
+    cursor: pointer;
+}
+.formStepListCnt .iconCnt{
+    width: 30px;
+    height: 30px;
+}
+.formStepListCnt.higlight .iconCnt{
+    width: 35px;
+    height: 35px;
+    margin-left: -2.5px;
+}
+.formStepListCnt.addCnt{
+}
+.formStepListCnt.addCnt .addIconCnt{
+    margin-left: 5px;
+}
+.formStepListCnt.addCnt .title span{
+    color: #000 !important;
+}
+.addIconCnt i{
+    background: #FFF;
+    color: #00B2E3;
+}
+.iconCnt button{
+    font-size: 14px;
+    background: #969798;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.higlight button{
+    /*background: #7068E2;*/
+    color: #fff;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.formStepListCnt .title span{
+    color: #969798 !important;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.formStepListCnt.higlight .title span{
+    color: #000 !important;
+    font-size: 16px;
+    font-weight: 600;
+/*    letter-spacing: .5px;*/
+}

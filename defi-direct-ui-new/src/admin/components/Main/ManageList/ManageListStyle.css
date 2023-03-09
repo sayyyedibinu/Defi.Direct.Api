@@ -1,0 +1,231 @@
+.fixed-right {
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background: #fff;
+    top: 0;
+    right: 0;
+    -webkit-box-shadow: 0 7px 10px 1px rgba(0,0,0,0.14), 0 2px 16px 1px rgba(0,0,0,0.12), 0 4px 5px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 7px 10px 1px rgba(0,0,0,0.14), 0 2px 16px 1px rgba(0,0,0,0.12), 0 4px 5px -2px rgba(0,0,0,0.2);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /*min-width: 320px;*/
+    width: 500px;
+    padding: 20px;
+    z-index: 9999;
+}
+.fixed-right.open {
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+.fixed-inner{
+    
+}
+
+.ML-table .editIcon{
+    color: #00B2E3;
+    opacity: .7;
+    margin-right: 5px;
+    float: right;
+}
+.ML-table .deleteIcon{
+    color: #DB5E5E;
+    opacity: .7;
+    float: right;
+}
+.ML-table .editIcon:hover, .ML-table .deleteIcon:hover{
+    opacity: 1;
+}
+.manageListHeader{
+    background-color: #00B3E3;
+    color: #FFF;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    padding: 15px 25px;
+    font-size: 18px;
+}
+.manageListHeader.create{
+    padding: 15px 35px;
+}
+.manageListHeader i{
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+.manageListHeader i.backBtn{
+    position: absolute;
+    left: 5px;
+    top: 11px;
+}
+.ML-desc1{
+    font-size: 16px;
+    color: #35455F;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+.ML-desc2{
+    font-size: 18px;
+    color: #00B3E3;
+    text-align: center;
+     margin-bottom: 0px;
+    margin-top: 0px;
+}
+.ML-tableWrapper{
+    margin-top: 25px;
+}
+.ML-viewContainer .ML-tableWrapper{
+    margin-top: 0px;
+    height: calc(100vh - 125px);
+    overflow: auto;
+}
+.ML-table{
+    margin-top: 20px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+}
+.ML-tableHead{
+    background-color: #5DD36D;
+    color: #FFF !important;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.ML-tableItems{
+    /*border-right: 1px solid rgba(0,0,0,0.13);*/
+}
+.ML-tableHeadRow th{
+    color: rgba(254,254,254,0.87);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+.ML-tableHeadRow th i{
+    position: absolute;
+    right: 5px;
+    margin-top: -3px;
+}
+.ML-tableClickableRow{
+    cursor: pointer;
+    min-height: 30px !important;
+    height: auto !important;
+}
+.ML-tableClickableRow:nth-child(even){
+    background-color: rgba(0,0,0,0.02);
+}
+.ML-tableClickableRow td{
+    color: #35455F;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: none;
+}
+
+.ML-tableFooter .pagination{
+    float: left;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.ML-tableFooter .pagination li.previous, .ML-tableFooter .pagination li.next {
+    padding: 0;
+}
+.addNewListBtn{
+    float: right;
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    background-color: #5DD36D !important;
+    color: #FFF !important;
+    text-transform: capitalize !important;
+}
+.addNewListOptionsBtn{
+    text-transform: capitalize !important;
+    background-color: #5DD36D !important;
+    color: #FFF !important;
+    border-radius: 4px;
+    float: right;
+    top: 25px;
+}
+.rdw-editor-main{
+    max-height: 200px;
+}
+.fieldsUsingWrapper{
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #F4F4F4;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+}
+.fieldsUsingWrapper .header{
+    color: #35455F;
+    font-size: 18px;
+}
+
+.fieldsUsingWrapper .tagCnt{
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 5px 15px;
+    background: #35455F;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/*START: custom table style*/
+.ML-table.custom .ML-tableHead .ML-tableHeadRow .ML-tableItems{
+    color: rgba(254,254,254,0.87);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 56px 12px 24px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+.ML-table.custom .ML-tableHead .ML-tableHeadRow .ML-tableItems i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.ML-table.custom .ML-tableItems{
+    padding: 4px 56px 4px 24px; 
+    color: #35455F;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: none;
+}
+.ML-table.custom .ML-tableItems.icon{
+    padding: 5px 4px 4px 0px; 
+}
+.ML-table.custom .ML-tableItems.icon i{
+    font-size: 20px;
+}
+.ML-table.custom .ML-tableClickableRow{
+    margin-bottom: 2px;
+}
+.ML-table.custom .ML-tableFooter{
+    padding: 5px 24px 10px 24px; 
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.75rem;
+    border-bottom: 0;
+}
+.ML-table.custom .ML-tableClickableRow.odd{
+    background-color: rgba(0,0,0,0.02);
+}
+.ML-tableFooter .pagination .previous, .ML-tableFooter .pagination .next {
+        margin-top: 4px;
+}
+
+/*END: custom table style*/

@@ -1,0 +1,489 @@
+.workingArea {
+    border: 3px solid #FCFCFD;
+    min-height: 350px;
+    padding: 25px;
+    box-shadow: 0 0 20px #FCFCFD !important;
+}
+
+.stepsCnt {
+    /*border: 1px solid #000;*/
+    display: inline-block;
+    margin-top: 10px;
+    float: left;
+}
+
+.componentsWrapper {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 75px;
+    background: #FFF;
+    min-height: 350px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+    position: relative;
+}
+
+.componentsWrapperFullWidth {
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 50px;
+    position: relative;
+}
+
+.componentsWrapper .saveFieldBtn {
+    position: absolute;
+    bottom: -65px;
+    right: 5px;
+}
+
+.componentsWrapperFullWidth .saveFieldBtn {
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+}
+
+.saveFabFieldBtn {
+    background-color: #6ABF4B !important;
+    color: #FFF !important;
+    position: fixed !important;
+    bottom: 35px;
+    right: 35px;
+}
+.sliderlbl{
+    float:center !important;
+    font-size: 18px;
+    color: #646569;;
+    text-align: center;  
+    padding: 10px;  
+     margin-left: 8px;
+     margin-top: -10px;
+     position: relative;
+
+}
+.sliderhint{
+    float:center !important;
+    text-align:center !important;
+    font-size: 18px;
+    color: #646569;;
+    text-align: center;  
+    padding: 10px;  
+    margin-left: 8px;
+    margin-top: -10px;
+    position: relative;
+
+}
+.saveFabFieldBtn:hover {
+    background-color: #7AD259 !important;
+}
+
+.stepsCnt ._eachStep {
+    /*border: 1px solid red;*/
+    height: auto;
+    min-height: 30px;
+    padding: 10px;
+
+}
+
+._eachStep .stepNoCnt {
+    width: 30px;
+    height: 30px;
+    background: #969798;
+    color: #FFF;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /*display: inline-block;*/
+    display: block;
+    float: left;
+}
+
+._eachStep.selected .stepNoCnt,
+._eachStep.selected:hover .stepNoCnt {
+    background: #7068E2;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    margin-left: -2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.23) !important;
+    /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;*/
+    /*    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.3), 0px 4px 5px 0px rgba(0, 0, 0, 0.2), 0px 1px 10px 0px rgba(0, 0, 0, 0.2);*/
+}
+
+._eachStep:hover .stepNoCnt {
+    background: #264C59;
+    cursor: pointer;
+}
+
+._eachStep .stepTitle {
+    color: #646569;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+._eachStep.selected .stepTitle,
+._eachStep.selected:hover .stepTitle {
+    /*color: #161A2E;*/
+    font-size: 16px;
+    font-weight: 600;
+}
+
+._eachStep:hover .stepTitle {
+    color: #000;
+}
+
+._eachStep .stepActions {
+    /* margin-left: 10px;*/
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+._eachStep .stepActions i {
+    font-size: 16px;
+    margin-left: 2px;
+}
+
+._eachStep.selected .stepActions i.edit {
+    color: #00B2E3;
+    opacity: 1;
+}
+
+._eachStep.selected .stepActions i.delete {
+    color: #DB5E5E;
+    /*    color: #969798;*/
+    opacity: 1;
+}
+
+._eachStep .stepActions i.edit {
+    color: #969798;
+    opacity: .5;
+}
+
+._eachStep .stepActions i.delete {
+    color: #969798;
+    opacity: .5;
+}
+
+.dragGhostClass {
+    border-left: 3px solid #00B2E3;
+}
+
+.stepsCnt .addNewStepCnt {
+    height: 25px;
+    padding: 10px;
+    cursor: pointer;
+    color: #161A2E;
+    position: relative;
+    margin-top: 5px;
+}
+
+.addNewStepCnt i {
+    color: #00B2E3;
+    position: absolute;
+}
+
+.addNewStepCnt ._title {
+    margin-left: 35px;
+    position: absolute;
+    margin-top: 2px;
+    color: #161A2E;
+    font-size: 16px;
+}
+
+/*.stepsCnt .rc-draggable-list-handles{
+    display: none;
+}*/
+
+.fieldListWrapper .rc-draggable-list {
+    width: 100%;
+}
+
+.DP-componentsWrapper {
+    /*width: 90%;
+    margin: auto;
+    background: #FFF;
+    min-height: 350px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;*/
+}
+
+.DP-emptyWrapper {
+    width: 100%;
+    text-align: center;
+    padding-top: 75px;
+}
+
+.AP-emptyWrapper {
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.DP-emptyHeader,
+.AP-emptyHeader {
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.DP-emptyDesc,
+.AP-emptyDesc {
+    color: #D8D8D8;
+    max-width: 550px;
+    margin: auto;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.DP-addNewComponent,
+.AP-addNewComponent {
+    padding-top: 25px;
+    /*max-width: 750px;*/
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.componentsWrapperFullWidth .DP-addNewComponent,
+.componentsWrapperFullWidth .AP-addNewComponent {
+    max-width: 100%;
+}
+
+.DP-addNewLine,
+.AP-addNewLine {
+    display: block;
+    height: 2px;
+    background-color: #E8E8E8;
+}
+
+.DP-addNewIcon,
+.AP-addNewIcon {
+    position: absolute;
+    top: 11px;
+    width: 45px;
+    height: 30px;
+    line-height: 43px;
+    background-color: #FFF;
+    color: #00B2E3;
+    cursor: pointer;
+}
+
+.componentsWrapper .fieldListWrapper .fieldListCnt {
+    padding: 15px;
+    border: 2px dashed #E8E8E8;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.fieldListCnt table {
+    margin: auto;
+    border-collapse: unset;
+    border-spacing: 0px;
+    border: 1px solid #98999A;
+    /*border: 2px solid #f5f7fb;*/
+    border-radius: 4px;
+    text-align: center;
+}
+
+.fieldListCnt table td {
+    padding: 15px 30px;
+    border-bottom: 2px 0 solid #646569;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-right: 1px solid #98999A;
+}
+
+.componentsWrapper .fieldListWrapper .fieldListCnt .fieldListCntCol {
+    padding-left: 10px;
+
+}
+
+.componentsWrapper .fieldListWrapper .fieldListCnt .fieldListCntCol-inner {
+    border: 2px dashed #E8E8E8;
+    position: relative;
+    padding: 25px;
+}
+
+.componentsWrapper .fieldListWrapper .fieldListCnt .fieldListCntColAdd {
+    padding: 0 5px 5px 10px;
+    position: relative;
+    text-align: center;
+}
+
+.fieldListCntColAdd .addColCnt {
+    height: 100%;
+    border: 2px solid #E8E8E8;
+    border-radius: 5px;
+    background-color: rgba(0, 178, 227, 0.02);
+}
+
+.fieldListCntColAdd .addColCnt i {
+    color: #00B2E3;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% - 12px);
+}
+
+.componentsWrapperFullWidth .fieldListWrapper .fieldListCnt {
+    padding: 25px;
+    border: 2px dashed #E8E8E8;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.fieldListCnt.fullWidth {
+    padding: 25px 0px !important;
+}
+
+.fieldListCnt .imgCnt {
+    text-align: center;
+    overflow: hidden;
+}
+
+.fieldListCnt .imgCnt img {
+    max-width: 320px;
+    max-height: 125px;
+}
+
+.fieldListCnt .fieldListActionCnt {
+    position: absolute;
+    top: 0px;
+    width: 75px;
+    right: 0;
+    text-align: right;
+}
+
+.insertedFields .fieldListCnt:hover {
+    /*margin-bottom: 20px !important;*/
+}
+
+.fieldListActionCnt i {
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.fieldListActionCnt i.delete {
+    color: #DB5E5E;
+}
+
+.fieldListActionCnt i.edit {
+    color: #00B2E3;
+}
+
+.insertFieldCnt-floating {
+    display: none;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    /*height: 5px;
+    background: #00B2E3;*/
+}
+
+.insertFieldCnt-floating .AP-addNewComponent {
+    padding-top: 25px;
+    width: 100% !important;
+    margin: auto;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    position: relative;
+    text-align: center;
+}
+
+.insertFieldCnt-floating .AP-addNewLine {
+    display: block;
+    height: 2px;
+    background-color: #00B2E3;
+}
+
+.insertFieldCnt-floating .AP-addNewIcon {
+    position: absolute;
+    top: 11px;
+    width: 45px;
+    height: 30px;
+    line-height: 43px;
+    background-color: #FFF;
+    color: #00B2E3;
+    cursor: pointer;
+}
+
+.insertFieldCnt-floating .AP-updateIcon {
+    position: absolute;
+    top: 11px;
+    margin-left: -40px;
+    width: 45px;
+    height: 30px;
+    line-height: 43px;
+    background-color: #FFF;
+    color: #00B2E3;
+    cursor: pointer;
+}
+
+.insertFieldCnt-floating .AP-deleteIcon {
+    position: absolute;
+    top: 10px;
+    margin-left: 40px;
+    width: 45px;
+    height: 30px;
+    line-height: 43px;
+    background-color: #FFF;
+    cursor: pointer;
+    color: #DB5E5E;
+}
+
+.insertedFields .fieldListCnt:hover .insertFieldCnt-floating {
+    display: block;
+}
+
+/*START: radio button styling*/
+.RadioGroupCnt {
+    overflow: hidden;
+}
+
+.radioBtnLabel {
+    max-width: 250px;
+    margin-left: 0px !important;
+    margin-bottom: 10px;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+
+}
+
+.radioBtnLabel.checked {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.17);
+}
+
+.radioBtnLabel span:last-child {
+    font-size: 18px;
+    color: #161A2E;
+}
+
+.sliderCnt {
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+}
+.sliderCnt div[role="slider"]{
+    width: 100%;
+    max-width: 240px;
+}
+.clearTextTransform button{
+    text-transform: none !important;
+}
+
+.withoutSteps .fieldListCnt .checkboxCnt{
+    text-align: left;
+}
+/*END: radio button styling*/
+
+/*END: slider styling*/
+
+
+/*END: slider styling*/

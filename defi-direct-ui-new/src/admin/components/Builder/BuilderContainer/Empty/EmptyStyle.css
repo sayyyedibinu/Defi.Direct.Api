@@ -1,0 +1,30 @@
+.emptyPageWrapper{
+    text-align: center;
+    /*margin-top: 95px !important;*/
+    padding-top: 75px !important;
+}
+.emptyPageWrapper .header1{
+    margin-bottom: 10px !important;
+}
+.emptyPageWrapper .header2{
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+    color: #969798;
+}
+.emptyPageWrapper .addPageBtn{
+    min-height: 40px;
+    width: 225px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    background-color: #00B2E3;
+    color: #FFF;
+    margin-top: 25px;
+}
+.emptyPageWrapper .addPageBtn:hover{
+    background-color: #FFF;
+    color: #00B2E3;
+    border: 1px solid #00B2E3;
+}

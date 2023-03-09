@@ -1,0 +1,124 @@
+.CC-Wrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 20px !important;
+}
+
+.CC-Wrapper .required {
+    color: #DB5E5E !important;
+}
+
+.CC-Container {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+    padding: 25px;
+}
+
+.CC-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.CC-CloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.CC-Header {
+    margin-bottom: 25px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 24px;
+    color: #646569;
+}
+
+.CC-Body {
+    margin-bottom: 30px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+.CC-Footer {
+    width: 100%;
+    text-align: center;
+}
+
+.CC-Footer button {
+    min-height: 40px;
+    width: 140px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 14px;
+    /*letter-spacing: .8px;*/
+}
+
+.CC-Footer .cancelBtn {
+    background: inherit;
+    box-shadow: none;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    margin-right: 20px;
+}
+
+.CC-Footer .cancelBtn:hover {
+    /*background: inherit;
+    border: 1px solid #969798;*/
+}
+
+.CC-Footer .saveBtn {
+    border-radius: 4px;
+    color: #FFF;
+}
+
+.CC-Footer .saveBtn:hover {
+    /*background-color: #FFF;
+    color: #00B2E3;*/
+}
+
+.fieldWidthCnt {
+    text-align: center;
+}
+
+.fieldWidthBtn {
+    height: 39px !important;
+    width: 141px !important;
+    margin-right: 10px !important;
+    border: 2px solid #00B2E3 !important;
+    background-color: rgba(0, 178, 227, 0.25) !important;
+    color: #00B2E3 !important;
+    border-radius: 0px !important;
+    margin-bottom: 5px !important;
+}
+
+.fieldWidthCnt .fieldWidthBtn:first-child {
+    border-radius: 5px 0 0 5px !important;
+}
+
+.fieldWidthCnt .fieldWidthBtn:last-child {
+    border-radius: 0 5px 5px 0 !important;
+}
+
+.fieldWidthBtn:hover {
+    color: #FFF !important;
+    background-color: #00B2E3 !important;
+}
+
+.fieldWidthBtn.selected {
+    color: #FFF !important;
+    background-color: #00B2E3 !important;
+}
+
+.columnChangeWarning {
+    color: #98999A;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px !important;
+}

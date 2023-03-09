@@ -1,0 +1,26 @@
+.side-nav-list {}
+
+.side-nav-list-item i {
+    color: #00B2E3;
+    /*    opacity: .5;*/
+    font-size: 30px;
+}
+.side-nav-list-item img{
+    opacity: .5;
+}
+.side-nav-list-item.disabled {
+    pointer-events: none;
+}
+
+.side-nav-list-item.disabled span {
+    color: #969798 !important;
+}
+
+.side-nav-list-item.disabled i {
+    opacity: .5;
+}
+.sidenavLabel{
+    padding: 0px !important;
+    color: #35455f !important;
+    font-size: 16px !important;
+}

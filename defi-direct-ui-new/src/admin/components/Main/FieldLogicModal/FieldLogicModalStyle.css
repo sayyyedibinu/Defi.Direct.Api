@@ -1,0 +1,166 @@
+.FL-Wrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 20px !important;
+    overflow: auto;
+}
+
+.FL-Wrapper .required {
+    color: #DB5E5E !important;
+}
+
+.FL-Container {
+    background-color: #FFF;
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+    padding: 25px;
+}
+
+.FL-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.FL-CloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.FL-Header {
+    margin-bottom: 8px;
+    margin-top: 0px;
+    text-align: center;
+    color: #646569;
+    font-size: 24px;
+}
+
+.FL-Body {
+    text-align: center;
+    margin-bottom: 30px !important;
+    margin-top: 20px;
+}
+
+.FL-Body .tagCnt {
+    /*padding: 5px 20px;
+    margin-right: 5px;
+    background: #d5d5d5;
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+    height: 33px;*/
+
+    padding: 5px 5px;
+    margin-right: 10px;
+    background: #d5d5d5;
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    margin-bottom: 10px;
+    height: 33px;
+    min-width: 33px;
+}
+
+.FL-Body .tagCnt.addCnt {
+    cursor: pointer;
+}
+
+.FL-Body .tagCnt .textCnt {
+    position: absolute;
+    font-size: 18px;
+    left: 0;
+    right: 0;
+    top: 10px;
+}
+
+.FL-Body .tagCnt.addCnt i {
+    top: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 32px;
+}
+
+.tagCnt i.close {
+    position: absolute;
+    font-size: 18px;
+    right: -3px;
+    top: -6px;
+    background: #646569;
+    border-radius: 50%;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.FL-Footer {
+    width: 100%;
+    text-align: center;
+}
+
+.FL-Footer button {
+    min-height: 40px;
+    width: 267px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.FL-Footer .cancelBtn {
+    box-shadow: none;
+    border: solid 2px #d5d5d5;
+    border-radius: 3px;
+    width: 130px;
+    font-size: 14px;
+    background: #FFF;
+    margin-right: 20px;
+}
+
+.FL-Footer .cancelBtn:hover {
+    /* background: inherit;
+    border: 1px solid #969798;*/
+}
+
+.FL-Footer .saveBtn {
+    border-radius: 4px;
+    color: #FFF;
+    border-radius: 3px;
+    width: 130px;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.FL-Footer .saveBtn:hover {
+    /*background-color: #FFF;
+    color: #00B2E3;*/
+}
+
+.tagCnt .staticField {
+    width: 75px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.tagCnt .Autocomplete input {
+    width: 100px !important;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: inherit;
+    outline: none;
+}
+
+.Autocomplete div div {
+    z-index: 1 !important;
+}
+
+.Autocomplete .sugestions {
+    padding: 5px 10px !important;
+    background: #FFF !important;
+}

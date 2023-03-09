@@ -1,0 +1,9 @@
+{
+    "API_BASE_URL": "https://api-qa.defidirect.com/api/",
+    "AUTH_URL": "https://api-qa.defidirect.com/connect/token",
+
+    "IMG_BASE_URL": "./assets/img/",
+    
+    
+    "Text_color": "#969798"
+}

@@ -1,0 +1,108 @@
+.modalSignCnt .loaderSpinner{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.spinner-container {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 100vw;
+    height:100vh;
+  }
+  
+  .spinner-0 {
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    height:8.5vh;
+    width:8.5vh;
+    margin:-4.142vh 0 0 -4.25vh ;
+    -webkit-animation: rotation-2 1s infinite linear;
+    -moz-animation: rotation-2 1s infinite linear;
+    -o-animation: rotation-2 1s infinite linear;
+    animation: rotation-2 1s infinite linear;
+    border-left: .5vh solid rgba(245,189,71,.95);
+    border-right: .5vh solid rgba(205,205,205,.35);
+    border-bottom: .5vh solid rgba(245,189,71,.95);
+    border-top: .5vh solid rgba(205,205,205,.35);
+    border-radius:100%;
+ }
+ 
+ .spinner {
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    height: 6vh;
+    width: 6vh;
+    margin:-2.95vh 0 0 -3vh ;
+    -webkit-animation: rotation 1s infinite linear;
+    -moz-animation: rotation 1s infinite linear;
+    -o-animation: rotation 18s infinite linear;
+    animation: rotation 1s infinite linear;
+    border-left: .5vh solid rgba(245,189,71,.95);
+    border-right: .5vh solid rgba(205,205,205,.35);
+    border-bottom: .5vh solid rgba(245,189,71,.95);
+    border-top: .5vh solid rgba(205,205,205,.35);
+    border-radius:100%;
+ }
+ 
+ .spinner-2 {
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    height:3.5vh;
+    width:3.5vh;
+    margin:-1.70vh 0 0 -1.70vh;
+    -webkit-animation: rotation-2 1s infinite linear;
+    -moz-animation: rotation-2 1s infinite linear;
+    -o-animation: rotation-2 1s infinite linear;
+    animation: rotation-2 1s infinite linear;
+    border-left: .5vh solid rgba(245,189,71,.95);
+    border-right: .5vh solid rgba(205,205,205,.35);
+    border-bottom: .5vh solid rgba(245,189,71,.95);
+    border-top: .5vh solid rgba(205,205,205,.35);
+    border-radius:100%;
+ }
+ 
+ @-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(359deg);}
+ }
+ @-moz-keyframes rotation {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(359deg);}
+ }
+ @-o-keyframes rotation {
+    from {-o-transform: rotate(0deg);}
+    to {-o-transform: rotate(359deg);}
+ }
+ @keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+ }
+ 
+ @-webkit-keyframes rotation-2 {
+    from {-webkit-transform: rotate(359deg);}
+    to {-webkit-transform: rotate(0deg);}
+ }
+ @-moz-keyframes rotation-2 {
+    from {-moz-transform: rotate(359deg);}
+    to {-moz-transform: rotate(0deg);}
+ }
+ @-o-keyframes rotation-2 {
+    from {-o-transform: rotate(359deg);}
+    to {-o-transform: rotate(0deg);}
+ }
+ @keyframes rotation-2 {
+    from {transform: rotate(359deg);}
+    to {transform: rotate(0deg);}
+ }

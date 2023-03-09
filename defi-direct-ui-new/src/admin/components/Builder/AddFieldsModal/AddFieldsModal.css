@@ -1,0 +1,152 @@
+.AFModal .modalWrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 60px !important;
+}
+
+.AFModal .divider {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: -25px;
+    margin-right: -25px;
+    border-color: #e8e8e8;
+    opacity: .3;
+}
+
+.AFModal .modalContainer {
+    background-color: #FFF;
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.AFModal .modalCloseBtn {
+    position: absolute;
+    right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 25px;
+}
+
+.AFModal .modalCloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.AFModal .modalHeader1 {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 25px;
+    font-size: 24px;
+    color: #35455f;
+}
+
+.AFModal-body {
+    text-align: center;
+    padding: 25px;
+}
+
+.AFModal-body .searchFilter {
+    width: 275px;
+}
+.AFModal-body .searchFilter div:first-child{
+    background-color: #f5f7fb !important;
+}
+.AFModal-body .searchFilter i{
+    padding-left: 5px;
+}
+.AFModal-body .searchFilter input{
+    color: #989898;
+     font-size: 14px;
+}
+.AFModal-body .fieldListWrapper {
+    max-height: 235px;
+    overflow: auto;
+}
+
+.AFModal .fieldListWrapper .fieldListCnt {
+    border-bottom: 1px solid #E8E8E8;
+    padding: 10px 5px;
+}
+
+.fieldListCnt .iconCnt {
+    display: inline-block;
+    background: #FCFCFD;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.fieldListCnt .iconCnt i {
+    margin-top: 9px;
+    color: #CCCCCB;
+    font-size: 24px;
+}
+
+.fieldListCnt .actionIcon {
+    color: #00B2E3;
+    margin-top: 11px;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.fieldListCnt .actionIcon:hover {
+    color: #98999A;
+}
+
+.fieldListWrapper .infoWrapper {
+    text-align: left;
+}
+
+.fieldListWrapper .infoWrapper .infoHeader {
+    font-size: 16px;
+    line-height: 20px;
+    color: #161A2E;
+}
+
+.fieldListWrapper .infoWrapper .infoDetails {
+    font-size: 14px;
+    color: #969798;
+}
+
+.AFModal-footer, .AFModal-refresh {
+    display: inline-block;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.AFModal-footer button {
+    min-height: 40px; 
+    width: 170px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.AFModal-footer button:hover {
+    background-color: #00B2E3;
+}
+
+.AFModal-refresh button {
+   min-height: 40px; 
+   width: 100px;
+   padding-left: 25px;
+   padding-right: 25px;
+   border-radius: 5px;
+   text-transform: capitalize;
+   font-size: 14px;
+   color: #FFF;
+   background-color: #00B2E3;
+}
+
+.AFModal-refresh button i {
+    margin-right: 5px;
+}
+.AFModal-footer .createFieldBtn{
+    font-size: 14px;
+    max-width: 160px;
+}

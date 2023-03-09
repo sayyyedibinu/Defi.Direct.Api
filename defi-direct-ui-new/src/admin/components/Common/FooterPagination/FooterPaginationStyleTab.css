@@ -1,0 +1,47 @@
+.tabpaginationWrapper {
+    width: calc(100% - 275px);
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+    color: #646569;
+    height: 40px;
+    font-size: 14px;
+}
+.tabpaginationWrapper .tabrowsPer{
+    float: right;
+    margin-top: 17px;
+    /* margin-right: 20px; */
+}
+.tabpaginationWrapper .tabrowsPer select{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0px;
+    color: #161A2E;
+}
+.tabpagination {
+    text-decoration: none;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 90px;
+    padding-top: 9px;
+    padding-left: 0px;
+}
+
+.tabpagination li {
+    float: left;
+    list-style-type: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    color: #35455F;
+    margin-top: 2px;
+}
+.tabpagination li.previous, .tabpagination li.next{
+    margin-top: -1px
+}
+.tabpagination li.active {
+    color: #FFF;
+    border-radius: 2px;
+    background-color: #00B3E3;
+}

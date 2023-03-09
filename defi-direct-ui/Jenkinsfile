@@ -1,0 +1,193 @@
+pipeline {
+  agent { 
+    dockerfile { // We are using a Docker container as our build agent
+      dir 'defi-direct-ui/cd-pipeline'
+      args "-v /var/run/docker.sock:/var/run/docker.sock"
+      customWorkspace "workspace/$BUILD_TAG"
+    }
+  }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+    timeout(time: 30, unit: 'MINUTES')
+    disableConcurrentBuilds()
+  }
+  environment {
+    AWS_REGION = "us-east-1"
+    
+    /* CD Secrets */
+    // CD_LOGIN_USERNAME = credentials('CD_DEFIDIRECT_LOGIN_USERNAME')
+    // CD_LOGIN_ORGANIZATION = credentials('CD_DEFIDIRECT_LOGIN_ORGANIZATION')
+    // CD_LOGIN_PASSWORD = credentials('CD_DEFIDIRECT_LOGIN_PASSWORD')
+    CD_HEALTH_CHECK_KEY = credentials('CD_HEALTH_CHECK_KEY')
+
+    /* STAGING Secrets */
+    // STAGING_LOGIN_USERNAME = credentials('STAGING_DEFIDIRECT_LOGIN_USERNAME')
+    // STAGING_LOGIN_ORGANIZATION = credentials('STAGING_DEFIDIRECT_LOGIN_ORGANIZATION')
+    // STAGING_LOGIN_PASSWORD = credentials('STAGING_DEFIDIRECT_LOGIN_PASSWORD')
+    STAGING_HEALTH_CHECK_KEY = credentials('CD_HEALTH_CHECK_KEY')
+
+    // /* QA Secrets */
+    // QA_LOGIN_USERNAME = credentials('QA_DEFIDIRECT_LOGIN_USERNAME')
+    // QA_LOGIN_ORGANIZATION = credentials('QA_DEFIDIRECT_LOGIN_ORGANIZATION')
+    // QA_LOGIN_PASSWORD = credentials('QA_DEFIDIRECT_LOGIN_PASSWORD')
+    QA_HEALTH_CHECK_KEY = credentials('CD_HEALTH_CHECK_KEY')
+
+    // /* PROD Secrets */
+    // PROD_LOGIN_USERNAME = credentials('PROD_DEFIDIRECT_LOGIN_USERNAME')
+    // PROD_LOGIN_ORGANIZATION = credentials('PROD_DEFIDIRECT_LOGIN_ORGANIZATION')
+    // PROD_LOGIN_PASSWORD = credentials('PROD_DEFIDIRECT_LOGIN_PASSWORD')
+    PROD_HEALTH_CHECK_KEY = credentials('CD_HEALTH_CHECK_KEY')
+
+    // aws access - empty by default so will use EC2 instances role
+    AWS_ACCESS_KEY_ID = credentials('AWS_PROD_ACCESS_KEY')
+    AWS_SECRET_ACCESS_KEY = credentials('AWS_PROD_ACCESS_SECRET')
+    AWS_DEFAULT_REGION = "us-east-1"
+  }
+  stages {
+    stage('Create/update Docker image repository') {
+      when {
+        not {
+          anyOf { branch 'DeployOnly'; branch 'DeployOnlyQA' }
+        }
+      }
+      steps {
+        sh('bash ./defi-direct-ui/cd-pipeline/updateEcrRepository.sh')
+      }
+    }
+    stage('Pre-Build QA') {
+      when {
+        branch 'qa'
+      }
+      steps {
+        sh('bash ./defi-direct-ui/cd-pipeline/pre-build.qa.sh')
+      }
+    }
+    stage('Pre-Build Prod') {
+      when {
+        anyOf { branch 'prod' }
+      }
+      steps {
+        sh('bash ./defi-direct-ui/cd-pipeline/pre-build.prod.sh')
+      }
+    }
+    stage('Build') {
+      when {
+        not {
+          anyOf { branch 'DeployOnly'; branch 'DeployOnlyQA' }
+        }
+      }
+      steps {
+        sh('bash ./defi-direct-ui/cd-pipeline/build.sh')
+      }
+    }
+    stage('Push Docker images') {
+      when {
+        not {
+          anyOf { branch 'DeployOnly'; branch 'DeployOnlyQA' }
+        }
+      }
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/dockerize.sh")
+      }
+    }
+    stage('Deploy to CD environment') {
+      when {
+				expression {
+					return env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'qa' && env.BRANCH_NAME != 'prod';
+				}
+			}
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/deployToCdEnvironment.sh")
+      }
+      post {
+        always {
+          archiveArtifacts artifacts: 'defi-direct-ui/cd-pipeline/k8s/cd-deployment.yaml'
+          // TODO: Move the CD environment cleanup to after CD tests if you create some.
+          sh("kubectl delete -f ./defi-direct-ui/cd-pipeline/k8s/cd-deployment.yaml --namespace=cd")
+        }
+      }
+    }
+    stage('Setup deployment artifacts') {
+      when {
+        not {
+          anyOf { branch 'DeployOnly'; branch 'DeployOnlyQA' }
+        }
+      }
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/setupDeploymentArtifacts.sh")
+        archiveArtifacts artifacts: 'defi-direct-ui/cd-pipeline/manual-deployments/**/*.*'
+        archiveArtifacts artifacts: 'defi-direct-ui/cd-pipeline/qa-deployment/**/*.*'
+        archiveArtifacts artifacts: 'defi-direct-ui/cd-pipeline/prod-deployment/**/*.*'
+      }
+    }
+    stage('Deploy to Staging') {
+      when { anyOf { branch 'master' } }
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/staging-deployment/stagingDeploy.sh")
+      }
+    }
+    stage('Deploy to QA') {
+      when {
+        branch 'qa'
+      }
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/qa-deployment/qaDeploy.sh")
+      }
+    }
+    stage('Deploy Ingress to QA') {
+      when {
+        anyOf { branch 'qa'; branch 'DeployOnlyQA' }
+      }
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/qa-deployment/qaDeploy.ingress.sh")
+      }
+    }
+    stage('Deploy to Prod') {
+      when {
+        anyOf { branch 'prod'; }
+      }
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/prod-deployment/prodDeploy.sh")
+      }
+    }
+    stage('Deploy Ingress to Prod') {
+      when {
+        anyOf { branch 'prod'; branch 'DeployOnly' }
+      }
+      steps {
+        sh("bash ./defi-direct-ui/cd-pipeline/prod-deployment/prodDeploy.ingress.sh")
+      }
+    }
+  }
+  post {
+    always {
+      cleanWs()
+    }
+    failure {
+			script {
+				if (env.BRANCH_NAME == 'master') {
+					slackSend(color: "danger", channel: "#release-int", message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} has failed! (<${env.BUILD_URL}|Open>)")
+				}
+        else if (env.BRANCH_NAME == 'qa') {
+					slackSend(color: "danger", channel: "#release-qa", message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} has failed! (<${env.BUILD_URL}|Open>)")
+				}
+        else if (env.BRANCH_NAME == 'prod') {
+					slackSend(color: "danger", channel: "#release-prod", message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} has failed! (<${env.BUILD_URL}|Open>)")
+				}
+			}
+		}
+    success {
+      script {
+        if (env.BRANCH_NAME == 'prod') {
+          slackSend(color: "good", channel: "#release-prod", message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} succeeded! (<${env.BUILD_URL}|Open>)")
+        }
+        else if (env.BRANCH_NAME == 'master') {
+          slackSend(color: "good", channel: "#release-int", message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} succeeded! (<${env.BUILD_URL}|Open>)")
+        }
+        else if (env.BRANCH_NAME == 'qa') {
+          slackSend(color: "good", channel: "#release-qa", message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} succeeded! (<${env.BUILD_URL}|Open>)")
+        }
+      }
+		}
+  }
+}

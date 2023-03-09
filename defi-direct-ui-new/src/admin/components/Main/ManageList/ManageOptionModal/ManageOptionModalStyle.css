@@ -1,0 +1,130 @@
+.MOM-Wrapper {
+    min-height: 275px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 20px !important;
+}
+
+.MOM-Container {
+    background-color: #FFF;
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.MOM-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.MOM-CloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.MOM-Header1,
+.MOM-Header2 {
+    text-align: center;
+}
+
+.MOM-Header1 {
+    margin-bottom: 8px;
+    margin-top: 25px;
+    color: #646569;
+    font-size: 24px;
+}
+
+.MOM-Header2 {
+    margin: 0;
+    font-size: 14px;
+    color: #969798;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.MOM-TitleBox {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.MOM-TitleBox label,
+.MOM-TitleBox input {
+    font-size: 14px;
+    color: #646569;
+}
+
+.MOM-TitleBox input {
+    font-size: 14px;
+    color: #646569;
+    padding-left: 5px;
+}
+
+.MOM-Footer {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.MOM-Footer button {
+    min-height: 40px;
+    max-width: 267px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.MOM-Footer .createBtn,
+.MOM-Footer .updateBtn {
+    color: #FFF;
+    border-radius: 3px;
+    width: 130px;
+    font-size: 14px;
+}
+
+.MOM-Footer .cancelBtn {
+    box-shadow: none;
+    border: solid 2px #d5d5d5;
+    border-radius: 3px;
+    width: 130px;
+    font-size: 14px;
+    background: #FFF;
+    margin-right: 20px;
+    top: 0px;
+}
+
+.MOM-Footer .cancelBtn:hover {
+    /*border: solid 2px #FFF;
+    background: #d5d5d5;*/
+}
+
+.MOM-Footer .createBtn,
+.MOM-Footer .updateBtn {
+    /*background-color: #00B2E3;
+    color: #FFF;*/
+}
+
+.MOM-Footer .createBtn:hover,
+.MOM-Footer .updateBtn:hover {
+    /*background-color: #FFF;
+    color: #00B2E3;
+    border: 1px solid #00B2E3;*/
+}
+
+.MOM-Footer .deleteBtn {
+    background-color: #DB5E5E;
+    color: #FFF;
+
+}
+
+.MOM-Footer .deleteBtn:hover {
+    background-color: #FFF;
+    color: #DB5E5E;
+    border: 1px solid #DB5E5E;
+}

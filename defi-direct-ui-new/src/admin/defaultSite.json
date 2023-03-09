@@ -1,0 +1,36 @@
+{
+    "site": {
+        "id": "",
+        "steps": [{
+            "id": "",
+            "label": "Step1",
+            "no": 1
+        }],
+        "fieldData": [
+            {
+                "name": "Step1",
+                "id": "stepID",
+                "fields": [[]]
+            }
+        ],
+        "data" : {
+
+        },
+        "decisionPageFieldData": [],
+        "pendingPageFieldData": [],
+        "settings": {
+            "submitUrl": "",
+            "updateUrl": "",
+            "ssc": "",
+            "appSave": false,
+            "createLogin": false,
+            "createManLogin": false,
+            "editApplication": false,
+            "defaultPrimary": "#7068E2",
+            "defaultSecondary": "#83CAFD",
+            "defaultBackground": "#FCFCFD",
+            "applicationErrTitle": "",
+        }
+    },
+    "isPublished": false
+}

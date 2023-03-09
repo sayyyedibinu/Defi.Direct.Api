@@ -1,0 +1,189 @@
+.brandingPage .divider {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-color: #e8e8e8;
+}
+
+.brandingPage .firstRow {
+    padding: 20px;
+}
+
+.firstRow .headerTxt,
+.colorPickerC-headerTxt {
+    color: #969798;
+    font-size: 14px;
+}
+
+.firstRow .descTxt,
+.colorPickerC-descTxt {
+    color: #CBCCD0;
+    font-size: 12px;
+    max-width: 495px;
+}
+
+.brandingPage .secondRow {
+    padding: 20px;
+}
+
+.secondRow .headerTxt {
+    color: #969798;
+    font-size: 14px;
+}
+
+.secondRow .descTxt {
+    color: #CBCCD0;
+    font-size: 12px;
+    max-width: 495px;
+}
+
+.brandingPage .uploadLogoCnt {
+    height: 112px;
+    min-width: 250px;
+    max-width: 350px;
+    border: 2px dashed #CBCCD0;
+    border-radius: 4px;
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+}
+
+.uploadLogoCnt .seletcedLogo {
+    max-width: 275px;
+    max-height: 73px;
+    margin-top: 20px;
+}
+
+.brandingPage .uploadLogoCnt:hover {
+    /*border: 2px dashed #83CAFD;*/
+}
+
+.uploadLogoCnt .uploadPlaceholder {
+    color: #7068E2;
+    font-size: 55px;
+    margin-top: 10px;
+    opacity: .9;
+}
+
+.uploadEmptyCnt p {
+    margin: 0;
+    color: #AFAFB5;
+}
+
+.uploadLogoCnt i {
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+.uploadLogoCnt .removeImgBtn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 18.74px;
+    width: 19.72px;
+    border-radius: 2px;
+    background-color: #D74022;
+    cursor: pointer;
+}
+
+.colorPickerCnt div {
+    display: inline-block;
+    min-height: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    padding: 10px;
+}
+
+.primaryColorCnt,
+.secondaryColorCnt,
+.backgroundColorCnt {
+    width: 185px;
+    height: 185px;
+    float: left;
+    text-align: center;
+    box-shadow: 0 0 10px #98999A !important;
+}
+
+.primaryColorCnt .showColorCnt,
+.secondaryColorCnt .showColorCnt,
+.backgroundColorCnt .showColorCnt {
+    width: 162px;
+    height: 100px;
+    margin-top: 15px;
+    display: inline-block;
+    box-shadow: 0 0 10px #DFDFDF !important;
+    cursor: pointer;
+}
+
+.primaryColorCnt .showColorTextField,
+.secondaryColorCnt .showColorTextField {
+    min-width: 150px;
+    min-height: 35px;
+    max-width: 150px;
+    max-height: 35px;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+    border-bottom: 1px solid #969798;
+    background-color: #FAFBFB;
+    overflow: hidden;
+}
+
+.backgroundColorCnt .showColorSelectField {
+    min-width: 150px;
+    min-height: 35px;
+    max-width: 150px;
+    max-height: 35px;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+    background-color: #FAFBFB;
+}
+
+.brandingPage .footerBtnCnt {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.brandingPage .saveBtn {
+    border-radius: 4px;
+    background-color: #5DD36D;
+    color: #fff !important;
+    border: 0px !important;
+    height: 40px;
+    width: 140px;
+    margin-left: 10px;
+    text-transform: capitalize;
+    letter-spacing: .3px;
+    top:20px;
+}
+
+.brandingPage .cancelBtn {
+    height: 40px;
+    width: 125px;
+    color: #98999A;
+    text-transform: capitalize;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    top:20px;
+}
+
+.errorCnt {
+    color: red;
+    font-size: 12px;
+}
+.brandingPage label{
+    font-size: 14px !important;
+    color: #646569 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.brandingPage input{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px !important;
+    color: #646569 !important;
+}

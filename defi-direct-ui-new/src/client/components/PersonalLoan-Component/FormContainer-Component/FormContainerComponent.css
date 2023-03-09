@@ -1,0 +1,431 @@
+.textAlignLeft{
+    text-align: left;
+}
+.formContainer-parent {
+    min-height: 350px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    position: relative;
+    box-shadow: 0 6px 24px 0 rgba(0,0,0,0.07) !important;
+    margin-bottom: 50px;
+    border: 1px solid rgba(0,0,0,0.07);
+    padding-bottom: 100px;
+}
+.formTitle h3{
+    color: #161A2E;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'inter_uiregular';
+    margin-bottom: 25px;
+}
+.formTitle {
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+.formContainer {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* .formContainer form {
+    margin-top: -15px;
+} 
+*/
+
+.textDescription {
+    font-size: 14px;
+    /*line-height: 0px;*/
+    letter-spacing: 0.1px;
+    color: #757575;  
+    padding-left: 1px; 
+    font-weight: 600;
+}
+
+.customCheckBox {
+    display: inline-block;
+    border: 1px solid #E0E0E0;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #000;
+    margin-bottom: 10px;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.customCheckBox.checked {
+    background-color: #3F51B5;
+    color: #FFF;
+}
+
+.radioStyle {
+    float: right;
+    color: #3F51B5 !important;
+}
+
+.customCheckBox.checked .radioStyle {
+    color: #FFF !important;
+}
+
+.hrGap {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #EEEEEE;
+    padding: 0;
+}
+.authorizationBtn{
+    width: 100%;
+    text-transform: capitalize;
+    background-color: #3f51b5 !important;
+    color: #FFF !important;
+    border: 1px solid #3f51b5 !important;
+    border-radius: 5px !important;
+    text-align: left !important;
+    margin-bottom: 10px !important;
+}
+.authorizationBtn img{
+    width: 15px;
+    padding-right: 15px;
+}
+
+.policyCheckCnt{
+    color: #000;
+    background-color: #FFF;
+}
+.chkbox_right{
+    text-align: left;
+}
+.policyCheckCnt.checked, .policyCheckCnt.checked .textAlignLeft{
+    color: #FFF !important;
+    background-color: #3f51b5;
+}
+.policyCheckCnt .policyCheckBox{
+    float: right;
+    margin-top: -15px !important;
+}
+.policyCheckCnt.checked .policyCheckBox{
+    color: #FFF;
+}
+.higlightText{
+    color: #3F51B5;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: .5px
+}
+.borderNone tr td{
+    border-bottom: none !important;
+}
+.customSlider button{
+    width: 25px !important;
+    height: 25px !important;
+}
+.zeroPaddingTBL td{
+    padding: 0 !important;
+    padding-right: 10px !important;
+    padding-bottom: 10px !important;
+    
+}
+.zeroPaddingTBL td p{
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+}
+/* .modalContainer{
+    
+} */
+.modalContainer div:first-child{
+    background: rgba(250,250,250 ,.8);
+}
+.modalContainer div[role="document"]{
+    position: relative;
+    width: 100%;
+}
+.modalContainer .modalSignCnt{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+}
+.highlight-infoText{
+    font-weight: 600 !important;
+    letter-spacing: .5px;
+    font-size: 16px !important;
+    padding: 15px 30px;
+}
+.modalSignCnt .infoText{
+    font-weight: 600;
+    letter-spacing: .5px;
+    font-size: 16px;
+    padding: 15px 30px;
+}
+.modalSignCnt .infoText2{
+    padding: 10px 50px;
+    color: #9E9E9E;
+    letter-spacing: .5px;
+}
+.modalContainer .modalCloseBtn{
+    width: 300px;
+    margin-top: 50px
+}
+.finalStepCnt{
+    text-align: center;
+    width: 100%;
+    margin-top: 35px;
+}
+.finalStepCnt .bigHiglightText{
+    font-size: 22px;
+    color: #3f51b5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+.finalStepCnt .descText{
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: .3px;
+}
+.finalStepCnt .extraDetailsText{
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: .3px;
+    color: #BDBDBD;
+}
+.finalStepCnt .backToWebsiteBtn{
+    min-width: 300px;
+    margin-top: 20px;
+    background-color: #5DD36D;
+    color: #FFF;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+.finalStepCnt .backToWebsiteBtn:hover{
+    background-color: #FFF;
+    border: 1px solid #5DD36D;
+    color: #5DD36D;
+}
+.formContainer .saveBtnContainer {      
+        text-align: center;      
+        width: 100%;   
+        /* position: absolute; 
+         bottom:12%;    */
+}
+
+.specificBtnContainer
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+.formContainer .saveLoginBtnContainer { 
+  
+    text-align: center;
+    width: 100%;
+    /* position: absolute; 
+    bottom:5%; */
+   }
+
+.saveBtn_form {
+    width: 300px; 
+    /* top:80px; */
+  
+}
+ 
+.emptyStep{
+        padding: 100px;
+}
+.textAreaCnt{
+    text-align: left;
+    max-height: 300px;
+    overflow: auto;
+    width: 100%;
+}
+
+.textAreaCntNoScroll{
+    text-align: left;
+    overflow: hidden;
+}
+
+.textAreaCnt p{
+    min-height: 10px;
+}
+.formContainer .imageCnt{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.formContainer .imageCnt img{
+    max-width: 100%;
+    max-height: 275px;
+    /*max-width: 275px;
+    max-height: 275px;*/
+}
+.formContainer .checkboxCnt, .formContainer .radioBtnCnt{
+    margin-top: 5px;
+    text-align: left;
+}
+.formContainer .formItem{
+    margin-bottom: 10px;
+}
+.formContainer .formItem div{
+    outline: none;
+}
+.finalStepCnt .policyCheckCnt, .finalStepCnt .descText, .finalStepCnt .extraDetailsText{
+    max-width: 350px;
+    margin: auto;
+}
+.finalStepCnt .descText, .finalStepCnt .extraDetailsText{
+    margin-top: 15px;
+    max-width: 450px;
+}
+.finalStepCnt img{
+    max-height: 75px;
+    max-width: 275px;
+}
+.CancelEditDiv .CancelEdit{
+    text-transform: none !important; 
+    text-align: right;
+    float:right;
+    font-size: 15px !important;
+    margin-right: 5px;
+} 
+.editAppdiv
+{
+    float:right;
+    text-transform: none !important;
+    margin-right: 5px;
+    /* margin-left: 0px !important; */
+    /* width:100%; */
+}
+.editApp{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+    text-transform: none !important;
+    font-size: 15px !important;
+}
+.RadioGroupCnt{
+    overflow: hidden;
+}
+.radioBtnCnt .radioBtnTitle{
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #161A2E;
+}
+.radioBtnLabel{
+    max-width: 250px;
+    margin-left: 0px !important;
+    margin-bottom: 10px;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    
+}
+.radioBtnLabel.checked, .radioBtnLabel:hover{
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.17);
+}
+.radioBtnLabel span:last-child{
+    color: #161A2E;
+}
+.radioBtnLabel.checked span:last-child{
+    color: #FFF;
+}
+.formContainer .columns{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.formContainer .columns .textAreaCnt{
+    margin-bottom: 15px;
+}
+
+
+.formItem input:disabled{
+    color: #000;
+}
+
+.formItem .nonnegative input:disabled{
+    color: #000;
+}
+.formItem .negative input:disabled{
+    color:red;
+}
+.mainLogin{
+    float: right;
+}
+
+
+.fixedTopLoginBtn {
+    position: fixed !important;
+    top: 13px;
+    z-index: 9999;
+    right: 10px;
+    display: inline-block !important;
+}
+.fixedTopLoginBtn:hover{
+    background-color: #FFF !important;
+}
+.tableCnt table {
+    margin: auto;
+    border-collapse: unset;
+    border-spacing: 0px;
+    border: 1px solid #98999A;
+    border-radius: 4px;
+    text-align: center;
+}
+.fieldListCnt table td {
+    padding: 15px 30px;
+    border-bottom: 2px 0 solid #646569;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-right: 1px solid #98999A;
+}
+
+.outputPageWrapper .TopRight{
+    position: fixed !important;
+    top: 13px;
+    z-index: 9999;
+    right: 5px;
+}
+.outputPageWrapper .BottomRight{
+    position: fixed !important;
+    bottom: 55px;
+    z-index: 9999;
+    right: 20px;
+}
+.outputPageWrapper .BottomLeft{
+    position: fixed !important;
+    bottom: 55px;
+    z-index: 9999;
+    left: 30px;
+}
+
+.percentageField{
+    position: relative;
+}
+.percentageField input{
+    padding-right: 20px !important;
+}
+.percentageField .symbal{
+    position: absolute;
+    right: 5px;
+    bottom: 25px;
+}
+
+.resultCardCnt div{
+    margin-bottom: 15px;
+}
+
+.formItem-safari 
+input[type="date"]::-webkit-calendar-picker-indicator{
+    display: none;
+   }

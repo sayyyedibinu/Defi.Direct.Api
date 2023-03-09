@@ -1,0 +1,202 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Direct Aurora cluster
+Parameters:
+  
+  DirectMinorEnvName:
+    Description: Give the minor environment name - ex '01'
+    Type: String
+    Default: '01'
+    AllowedPattern: '[0-9]*'
+    ConstraintDescription: Name must be numbers 0 - 9
+  
+  NamePrefix:
+    Description: Naming prefix applied for Jenkins automation
+    Type: String
+    AllowedValues:
+      - defi-apps-prod
+      - defi-apps-nonprod
+      - defi-apps-nonprod-cd
+      - defi-apps-nonprod-qa
+  
+  InstanceType:
+    Default: db.t2.small
+    AllowedValues:
+      - db.t2.small
+      - db.t2.medium
+      - db.r3.large
+      - db.r3.xlarge
+    Description: The instance type to use for the database.
+    Type: String
+  
+  Username:
+    Description: The database admin account user name.
+    Type: String
+  
+  Password:
+    Description: The database admin account password.
+    Type: String
+  
+  DBPort:
+    Type: String
+    Default: 3306
+    Description: Port for DB connections
+  
+  SharedServicesCidrBlock:
+    Type: String
+    Default: 10.119.0.0/19
+  
+  # These are the security groups k8s could be running in (like nonprod01 and nonprod02)
+  # !! important !! needs to match up with VPCId below
+  ContainerHostsSecurityGroupId2:
+    Type: String
+    Default: sg-09c14fc40a0562128 # nonprod02-cont01-sg; prod is sg-04d946a1e81a0a76a (prod02-cont01-sg)
+  
+  PublicAccess:
+    Type: String
+    AllowedValues:
+      - true
+      - false
+    Default: false
+    Description: Set to false to prevent external access to database, set to true to enable external access to database
+  
+  DiskEncKmsKeyId:
+    Description: Which key to use for drive encryption
+    Type: String
+    Default: arn:aws:kms:us-east-1:680054776144:key/20016d18-a352-4f66-b9be-d1f61e2e92bc
+  
+  EncryptDirectDB:
+    Type: String
+    AllowedValues:
+      - true
+      - false
+    Default: true
+    Description: 'Set to false for no encryption, set to true to encrypt the DB instance'
+
+  DirectBackupRetention:
+    Type: String
+    Default: 7
+    Description: The number of days that automatic DB snapshots are retained
+
+  # !! important !! VPCId, and VPCSubnets need to match up
+  VPCId:
+    Type: String
+    Default: vpc-4303f33b # nonprod
+
+  VPCSubnets:
+    Description: Which Subnets from the VPC to use for the DB
+    Type: List<String>
+    Default: subnet-aba769e0, subnet-8ef1f1d4, subnet-871817e3 # nonprod-datasubnet-a/b/c
+
+Conditions:
+  EncryptDirectDB: !Equals [ !Ref EncryptDirectDB, true ]
+
+Resources:
+
+  DirectSG2:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Custom SG 2 for Defi Direct DB Access
+      GroupName: !Sub '${NamePrefix}-db-sg-eks-mysql-${DirectMinorEnvName}-2'
+      VpcId: !Ref VPCId # !! important !! needs to match up with ContainerHostsSecurityGroupId2
+      SecurityGroupIngress:
+        # shared services
+        - IpProtocol: TCP # sql
+          FromPort: '3306'
+          ToPort: '3306'
+          CidrIp: !Ref SharedServicesCidrBlock
+        # containers hosts sg
+        - IpProtocol: TCP # sql
+          FromPort: '3306'
+          ToPort: '3306'
+          SourceSecurityGroupId: !Ref ContainerHostsSecurityGroupId2 # !! important !! needs to match up with VPCId
+  
+  DirectDBSubnetGroup: # http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Subnet Group to use for Direct's Aurora DB instances
+      SubnetIds: !Ref VPCSubnets # !! important !! needs to match up with VPCId
+      Tags:
+        - Key: Name
+          Value: !Sub '${NamePrefix}-db-subnetgrp-eks-${DirectMinorEnvName}'
+
+  DirectDBCluster:
+    Type: 'AWS::RDS::DBCluster'
+    DependsOn: 
+    - DirectSG2
+    - DirectDBSubnetGroup
+    Properties:
+      Engine: aurora-mysql
+      MasterUsername: !Ref Username
+      MasterUserPassword: !Ref Password
+      Port: !Ref DBPort
+      DBClusterParameterGroupName: !Ref DirectDBClusterParameterGroup
+      DBClusterIdentifier: !Sub '${NamePrefix}-db-direct-eks-${DirectMinorEnvName}'
+      KmsKeyId: !If [ EncryptDirectDB, !Ref DiskEncKmsKeyId, !Ref "AWS::NoValue" ]
+      StorageEncrypted: !Ref EncryptDirectDB
+      BackupRetentionPeriod: !Ref DirectBackupRetention
+      PreferredBackupWindow: '02:00-03:00'
+      PreferredMaintenanceWindow: 'mon:03:00-mon:04:00'
+      DBSubnetGroupName: !Ref DirectDBSubnetGroup
+      VpcSecurityGroupIds:
+        - !GetAtt DirectSG2.GroupId
+      Tags:
+        - Key: GitHubRepo
+          Value: Defi-Direct
+
+  DirectDBPrimaryInstance:
+    Type: 'AWS::RDS::DBInstance'
+    DependsOn: DirectDBSubnetGroup
+    Properties:
+      Engine: aurora-mysql
+      DBClusterIdentifier: !Ref DirectDBCluster
+      PubliclyAccessible: !Ref PublicAccess
+      DBInstanceClass: !Ref InstanceType
+      DBInstanceIdentifier: !Sub '${NamePrefix}-db-direct-primary-eks-${DirectMinorEnvName}'
+      DBParameterGroupName: !Ref DirectDBInstanceParameterGroup
+      DBSubnetGroupName: !Ref DirectDBSubnetGroup
+      Tags:
+        - Key: GitHubRepo
+          Value: Defi-Direct
+  
+  DirectDBReplicaInstance:
+    Type: 'AWS::RDS::DBInstance'
+    DependsOn: DirectDBSubnetGroup
+    Properties:
+      Engine: aurora-mysql
+      DBClusterIdentifier: !Ref DirectDBCluster
+      PubliclyAccessible: !Ref PublicAccess
+      DBInstanceClass: !Ref InstanceType
+      DBInstanceIdentifier: !Sub '${NamePrefix}-db-direct-replica-eks-${DirectMinorEnvName}'
+      DBParameterGroupName: !Ref DirectDBInstanceParameterGroup
+      DBSubnetGroupName: !Ref DirectDBSubnetGroup
+      Tags:
+        - Key: GitHubRepo
+          Value: Defi-Direct
+  
+  DirectDBClusterParameterGroup:
+    Type: 'AWS::RDS::DBClusterParameterGroup'
+    Properties:
+      Description: Direct Aurora Cluster Parameter Group
+      Family: aurora-mysql5.7
+      Parameters:
+        time_zone: US/Central
+  
+  DirectDBInstanceParameterGroup:
+    Type: 'AWS::RDS::DBParameterGroup'
+    Properties:
+      Description: Direct Aurora Cluster Parameter Group
+      Family: aurora-mysql5.7
+      Parameters:
+        sql_mode: 'ANSI,TRADITIONAL'
+
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub '${NamePrefix}-direct-eks'
+
+Outputs:
+  EndpointAddress:
+    Description: Connection endpoint for the database
+    Value: !GetAtt DirectDBCluster.Endpoint.Address
+    Export:
+      Name: !Sub '${NamePrefix}-db-direct-endpoint-eks-${DirectMinorEnvName}'

@@ -1,0 +1,52 @@
+.sideMenuWrapper{
+    position: relative;
+    margin-top: 64px;
+}
+.sideMenuCnt{
+    border-right: 3px solid #CCCCCB;
+    min-height: calc(100vh - 65px);
+    padding-top: 20px;
+    position: relative;
+}
+.mainCntWrapper{
+    min-height: calc(100vh - 65px);
+    /*padding: 25px;*/
+    margin-top: 2px !important;
+    background: #FFF;
+    /*background: #E3E3E4;*/
+}
+.hideElement{
+    display: none;
+}
+.sideMenuCloseCnt{
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 0 2px 2px 0;
+    background-color: #CCCCCB;
+    z-index:10;
+    text-align: center;
+    color: #AFAFB5;
+    cursor: pointer;
+}
+.sideMenuOpenCnt{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 0 2px 2px 0;
+    background-color: #CCCCCB;
+    z-index:10;
+    text-align: center;
+    color: #AFAFB5;
+    cursor: pointer;
+}
+.sideMenuCloseCnt:hover, .sideMenuOpenCnt:hover{
+    color: #000000;
+}
+.sideMenuCloseCnt i, .sideMenuOpenCnt i{
+    margin-top: 3px;
+}

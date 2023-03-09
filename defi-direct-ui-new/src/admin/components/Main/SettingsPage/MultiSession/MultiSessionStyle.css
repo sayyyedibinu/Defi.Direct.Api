@@ -1,0 +1,41 @@
+.MSPage .footerBtnCnt{
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.MSPage .multisessionarea{
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+}
+.MSPage .footerBtnCnt .saveBtn{
+    border-radius: 4px;	
+    color: #fff !important;
+    border: 0px !important;
+    height: 40px;
+    width: 140px;
+    margin-left: 10px;
+    text-transform: capitalize;
+    letter-spacing: .3px;
+    font-size: 14px;
+    top: 21px;
+}
+.MSPage .footerBtnCnt .cancelBtn{
+    height: 40px;
+    width: 140px;
+    text-transform: capitalize;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    top: 21px;
+}
+.MSPage form input{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px !important;
+    color: #646569 !important;
+    background-color: #f5f7fb;
+}
+.tab {
+    margin-left: 15px;
+}

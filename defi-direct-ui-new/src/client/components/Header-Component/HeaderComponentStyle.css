@@ -1,0 +1,29 @@
+.headerCmp{
+    background-color: #FFF !important;
+    position: fixed !important;
+    top: 0 !important;
+    color: #969798 !important;
+    height: 63px;
+    box-shadow: none !important;
+    border-bottom: 2px solid #E8E8E8;
+}
+.headerCmp .logoCnt{
+    text-align: center;
+    height: 63px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.logoCnt img{
+    max-width: 165px !important;
+    max-height: 33px !important;
+    cursor: pointer;
+    width: 100%;
+}
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+}
+.activeLink {
+    pointer-events: auto;
+    cursor: pointer;
+}

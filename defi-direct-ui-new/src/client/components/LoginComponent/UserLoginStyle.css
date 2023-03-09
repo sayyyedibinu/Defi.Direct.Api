@@ -1,0 +1,186 @@
+.ULC-Header {
+    margin-bottom: 8px;
+    margin-top: 24px;
+    text-align: center;
+    color: #646569;
+}
+
+.createModalHeader2 {
+    margin: 0;
+    font-size: 14px;
+    color: #969798;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createModalTitleBox {
+    padding: 25px 50px;
+}
+
+.ULC-Wrapper form label {
+    font-size: 14px !important;
+    color: #646569 !important;
+}
+
+.ULC-Wrapper form input {
+    padding-left: 0px;
+    padding-right: 10px;
+    font-size: 14px !important;
+    color: #646569 !important;
+    /*background-color: #f5f7fb;*/
+}
+
+.ULC-Wrapper form .fieldItem {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.createModalTitleBox label,
+.createModalTitleBox input {
+    color: #969798;
+    font-size: 18px;
+}
+
+.lblUrl {
+    color: black !important;
+}
+
+.createModalTitleBox input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px
+}
+
+.ULC-Footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.Text-Section {
+    width: 90%;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.Warning-Section {
+    color: #e89805;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.Warning-Section i {
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.ULC-Footer button {
+    min-height: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.ULC-Footer .deleteBtn {
+    background-color: #DB5E5E;
+    color: #FFF;
+}
+
+.ULC-Footer .insertBtn {
+    border-radius: 3px;
+    color: #FFF;
+    width: 145px;
+    font-size: 14px;
+}
+
+.ULC-Footer .cancelBtn {
+    background: inherit;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    box-shadow: none;
+    width: 145px;
+    font-size: 14px;
+    margin-right: 20px
+}
+
+.ULC-Footer .cancelBtn:hover {}
+
+.ULC-Footer .insertBtn:hover {}
+
+.ULC-Footer .descTxt {
+    color: #CBCCD0;
+    font-size: 10px;
+    text-align: left;
+    padding-left: 53px;
+}
+
+input[type="file"] {
+    color: #CBCCD0;
+    ;
+}
+
+input[type=file] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: border-box;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    width: 0;
+}
+
+.descTxt.error {
+    color: red;
+}
+
+.upload-file {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 22px;
+    border: 1px solid #969798;
+    height: 38px;
+    border-radius: 8px 0 0 9px;
+    position: relative;
+}
+
+.file-upload-input {
+    width: 100%;
+    height: 38px;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -3px;
+    border-radius: 8px 0 0 9px;
+    padding-top: 14px;
+    padding-left: 90px;
+}
+
+.file-label {
+    color: #FFF;
+    font-size: 16px;
+    position: absolute;
+    left: -1px;
+    height: 32px;
+    border-radius: 9px 0 0 9px;
+    background-color: #00B2E3;
+    top: -1px;
+    padding: 8px 10px 0 10px;
+}
+
+.ULC-Wrapper .ULM-Header{
+    text-align: center;
+}
+
+.ULC-Wrapper .ULC-Footer button{
+    margin-right: 25px;
+    margin-bottom: 5px;
+}

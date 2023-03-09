@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: 'inter_uiregular';
+    src: url('./admin/assets/fonts/Inter-UI-Regular/Inter-UI-Regular.woff2') format('woff2'),
+         url('./admin/assets/fonts/Inter-UI-Regular/Inter-UI-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'inter_uiregular' !important;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.selector { property:value; }
+}

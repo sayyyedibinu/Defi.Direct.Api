@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    This page is used to migration.
+</body>
+
+<script>
+     var baseUrl =  "https://api-qa.defidirect.com/";
+	 var token = "";
+	 var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": baseUrl+"connect/token",
+	  "method": "POST",
+	  "headers": {
+		"content-type": "application/x-www-form-urlencoded",
+		"cache-control": "no-cache"
+	  },
+	  "data": {
+		"grant_type": "password",
+		"username": "admin",
+		"password": "Defirocks2018!"
+	  }
+	};
+
+	$.ajax(settings).done(function (response) {
+	    token = response.token_type+" "+response.access_token;
+		getSiteList();
+	});
+   
+    function getSiteList(){
+	    $.ajax({
+            type: 'GET',
+            url: baseUrl+"api/Sites",
+            headers: {
+                "Content-Type":"application/json"
+            },
+			beforeSend: function (xhr) {
+				xhr.setRequestHeader('Authorization', token);
+            },
+            success: function(data) {
+                for(var i = 0; i < data.length; i++) getSiteById(data[i].id);
+            }
+        });
+    }
+    
+    function getSiteById(id){
+	    $.ajax({
+            type: 'GET',
+            url: baseUrl+"api/Sites/"+id,
+            headers: {
+                "Content-Type":"application/json"
+            },
+			beforeSend: function (xhr) {
+				xhr.setRequestHeader('Authorization', token);
+            },
+            success: function(data) {
+                migrationLogic(data.site);
+            }
+        });
+    }
+    
+    function migrationLogic(data){
+         if(!data.site.pendingPageFieldData){
+		    data.site.pendingPageFieldData = [];
+		    postSite(data)
+		 } 
+    }
+    
+    function postSite(data){
+        /*remove return statment if you want to save the changes.*/
+       return;
+        
+        $.ajax({
+            type: 'POST',
+            url: baseUrl+"api/Sites",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            data: JSON.stringify(data),
+			beforeSend: function (xhr) {
+				xhr.setRequestHeader('Authorization', token);
+            },
+			success: function(msg) {
+                console.log(msg);
+            },
+        });
+    }
+    
+
+</script>
+
+</html>

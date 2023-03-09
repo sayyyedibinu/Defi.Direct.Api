@@ -1,0 +1,176 @@
+.fieldsContainer {
+    margin-top: 35px;
+}
+
+.fieldsContainer .blueColor {
+    color: #00B3E3 !important;
+}
+
+.FSP-paginationWrapper {
+    margin-bottom: 20px;
+}
+
+.FSP-paginationCnt {
+    font-size: 16px;
+    color: #646569;
+}
+
+.FSP-paginationCnt span {
+    color: #969798;
+    -webkit-text-stroke: .5px #979797;
+}
+
+.FP-filterCnt {
+    padding-left: 15px;
+}
+.FP-filterCntMain{
+    background-color: #f5f7fb;
+    
+}
+.FP-filterCntMain input{
+    color: #989898;
+    font-size: 14px;
+}
+.FP-filterIconCnt{
+    padding-left: 5px;
+}
+.selectBoxCnt {
+    margin-left: 35px;
+}
+
+.selectBoxCnt .FP-label {
+    color: #64666a;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.FP-filterCnt .selectBox {
+    height: 39px;
+    width: 162px;
+    background-color: inherit;
+    background-color: #f5f7fb;
+    line-height: 3;
+    color: #646569;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.FP-actionCnt {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.newFieldBtn {
+    float: right;
+    height: 40px;
+    width: 140px;
+    border-radius: 4px;
+    color: #FFF !important;
+    text-transform: capitalize !important;
+    letter-spacing: .2px;
+    font-size: 14px !important;
+    margin-top: 0px !important;
+}
+
+.newFieldBtn i {
+    margin-right: 5px;
+}
+
+.fieldsContainer .manageListFieldBtn {
+    float: right;
+    height: 40px;
+    width: 140px;
+    border-radius: 4px;
+    color: #FFF !important;
+    text-transform: capitalize !important;
+    letter-spacing: .2px;
+    font-size: 14px !important;
+    margin-top: 0px !important;
+    margin-right: 10px;
+}
+
+.FP-tableCnt {
+    margin-top: 25px;
+    max-height: calc(100vh - 275px);
+    overflow: auto;
+}
+
+.FP-tableRow {
+    /*cursor: pointer;*/
+    min-height: 90px;
+    width: 1170px;
+    margin-bottom: 20px !important;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.09);
+    background-color: #ffffff;
+    border: solid 1px #f0efef;
+}
+
+/*.FP-tableRow:hover {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.09), 0 10px 15px 0 rgba(0, 0, 0, 0.16);
+}*/
+
+.FP-tableRow.fadeit {
+    opacity: .5;
+}
+
+.FP-tableRow .iconWrapper,
+.FP-tableRow .actionWrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.FP-tableRow .infoWrapper {
+    padding: 20px;
+}
+
+.infoWrapper .infoHeader,
+.infoWrapper .infoDetails {
+    margin: 0;
+}
+
+.infoWrapper .infoHeader {
+    color: #646569;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.infoWrapper .infoDetails {
+    color: #969798;
+    font-size: 16px;
+}
+
+.iconWrapper .iconCnt {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(204, 204, 203, 0.25);
+}
+
+.iconCnt i {
+    color: #264C59;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.toggleBtn {
+    color: #35455F;
+}
+
+.actionCnt .actionIconCnt {
+    position: relative;
+    cursor: pointer;
+}
+
+.actionCnt .actionIconCnt i {
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    color: #c0c0c4;
+    font-size: 30px;
+}
+
+.actionIconCnt i:hover {
+    color: #969798;
+}

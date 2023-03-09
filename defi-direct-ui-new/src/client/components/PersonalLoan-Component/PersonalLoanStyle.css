@@ -1,0 +1,10 @@
+.personalLoanWrapper{
+    background: #FFF;
+}
+.LinearProgressBar{
+    height: 10px !important;
+    border-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    margin-top: 4px !important;
+}

@@ -1,0 +1,104 @@
+.DFC-Wrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 125px !important;
+}
+
+.DFC-Container {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.DFC-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.DFC-CloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.DFC-Header {
+    margin-bottom: 8px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.DFC-Text{
+    text-align: center;
+    align-content: center;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    color: #969798;
+}
+
+
+.createModalHeader2 {
+    margin: 0;
+    font-size: 14px;
+    color: #969798;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createModalTitleBox {
+    padding: 25px 50px;
+}
+
+.createModalTitleBox label,
+.createModalTitleBox input {
+    color: #969798;
+    font-size: 18px;
+}
+
+.createModalTitleBox input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px
+}
+
+.DFC-Footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.DFC-Footer button {
+    min-height: 40px;
+    width: 140px !important;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+.DFC-Footer .okayBtn {
+    border-radius: 4px;
+    color: #FFF;
+}
+
+.DFC-Footer .okayBtn:hover {
+    /*background-color: #FFF;
+    color: #00B2E3;*/
+}
+
+.DFC-Footer .cencelBtn {
+    background: inherit;
+    box-shadow: none;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    margin-right: 20px;
+}
+
+.DFC-Footer .cencelBtn:hover {
+    background-color: #969798;
+    color: #FFF;
+}

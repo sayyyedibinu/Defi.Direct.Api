@@ -1,0 +1,161 @@
+.fieldWrapper {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.fieldWrapper .actionCnt {
+    text-align: right;
+}
+
+.FP-paginationCnt {
+    font-size: 16px;
+    color: #646569;
+    line-height: 45px;
+    display: inline-block;
+}
+
+.FP-paginationCnt span {
+    color: #969798;
+    -webkit-text-stroke: .5px #979797;
+}
+
+.saveFieldBtn {
+    height: 40px;
+    width: 128px;
+    border-radius: 4px;
+    font-size: 14px !important;
+    color: #FFF !important;
+    text-transform: capitalize !important;
+}
+
+.saveFieldBtn.F3BD48 {
+    background-color: #F3BD48 !important;
+}
+
+.manageListBtn {
+    height: 40px;
+    width: 128px;
+    border-radius: 4px;
+    font-size: 14px !important;
+    color: #FFF !important;
+    text-transform: capitalize !important;
+    text-transform: capitalize !important;
+    margin-right: 20px !important;
+}
+
+.cancelFieldBtn {
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+    margin-right: 10px !important;
+    border-radius: 3px !important;
+    border: solid 2px #d5d5d5 !important;
+}
+
+.fieldCnt {
+    margin-top: 25px;
+    padding: 25px;
+    min-height: 350px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.09), 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+    color: rgba(175, 175, 181, 0.87) !important;
+}
+
+.fieldCnt .innerCnt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fieldCnt .formCtrl,
+.footerCnt .formCtrl {
+    width: 100%;
+    max-width: 336px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.fieldCnt .inputBoxCnt,
+.fieldCnt .formCtrl {
+    margin-bottom: 25px;
+}
+
+.selectBox {
+    height: 39px;
+    background-color: #f5f7fb;
+    color: #646569 !important;
+    font-size: 14px !important;
+    padding-left: 10px;
+}
+
+.fieldCnt .divider {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+    border-color: #e8e8e8;
+    opacity: .3;
+}
+
+.fieldCnt .inputBoxCnt {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inputBoxCnt .inputBox {
+    margin-top: 7px;
+    max-width: 336px;
+    background-color: #f5f7fb;
+}
+
+.inputBoxCnt .inputBox label,
+.inputBoxCnt .inputBox input,
+.inputBoxCnt .inputBox select,
+.inputBoxCnt .inputBox .selectBox,
+.formCtrl label {
+    color: #646569 !important;
+    font-size: 14px !important;
+    padding-left: 10px;
+}
+
+.minValueCnt,
+.maxValueCnt {
+    position: relative;
+    max-width: 336px;
+}
+
+.minValueCnt i,
+.maxValueCnt i {
+    position: absolute;
+    cursor: pointer;
+    top: 25px;
+    right: 5px;
+}
+
+.editDisplayLogicCnt .line1 {
+    color: #646569;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.editDisplayLogicCnt .line1 i {
+    color: #264c59;
+    font-size: 20px;
+}
+
+.editDisplayLogicCnt .line2 {
+    color: rgba(175, 175, 181, 0.87);
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 23px;
+}
+
+.editDisplayLogicCnt .line3 {
+    color: #646569;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-left: 23px;
+    letter-spacing: .5px;
+}

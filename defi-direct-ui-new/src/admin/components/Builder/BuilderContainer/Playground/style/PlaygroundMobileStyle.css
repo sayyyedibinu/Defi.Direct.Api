@@ -1,0 +1,68 @@
+.mobileMode{
+    /*background: yellow;*/
+}
+.mobileMode .stepsCnt{
+    width: 100%;
+    display: none;
+    padding-left: 10px;
+}
+.mobileMode .componentsWrapper{
+    width: 100%;
+}
+.mobileMode .mobileNavBar{
+    display: block;
+    height: 63px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 2px #969798 !important;
+}
+.mobileNavBar .hamburgerMenuCnt{
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.mobileNavBar .hamburgerMenuCnt i{
+    font-size: 30px;
+    color: #969798;
+}
+.mobileNavBar img{
+    margin-top: 10px;
+}
+.mobileMode .progressBarCnt{
+    display: block;
+    padding: 10px;
+    height: 25px;
+    /*box-shadow: 10px 0 20px #969798 !important;*/
+    box-shadow: 0px 0px 2px #969798 !important;
+    cursor: pointer;
+}
+.mobileMode .progressBarCnt div{
+    margin-top:-1px;
+    float: left;
+    text-align: center;
+    height: 25px;
+}
+.mobileMode .progressBarCnt .counter{
+    width: 15%;
+    font-size: 14px;
+    margin-top: 0px;
+}
+.mobileMode .progressBarCnt .progressBar{
+    width: 75%;
+}
+.mobileMode .progressBarCnt .icon{
+    width: 10%;
+}
+.mobileMode .progressBarCnt .icon i{
+    margin-top: -4px;
+    font-size: 28px;
+}
+
+.mobileMode .DP-componentsWrapper{
+    /*width: 100%;
+    margin: auto;
+    background: #FFF;
+    min-height: 350px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;*/
+}

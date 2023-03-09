@@ -1,0 +1,295 @@
+.ruleWrapper {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.ruleWrapper .actionCnt {
+    text-align: right;
+}
+
+.RP-paginationCnt {
+    font-size: 16px;
+    color: #646569;
+    line-height: 45px;
+    display: inline-block;
+}
+
+.RP-paginationCnt span {
+    color: #969798;
+    -webkit-text-stroke: .5px #979797;
+}
+
+.saveFieldBtn {
+    height: 40px;
+    width: 128px;
+    border-radius: 4px;
+    font-size: 14px !important;
+    color: #FFF !important;
+    text-transform: capitalize !important;
+}
+
+.ruleCnt {
+    position: relative;
+}
+
+.ruleMainCnt {
+    margin-bottom: 35px;
+}
+
+.ruleCnt .addConditionBnt {
+    width: 100px !important;
+    position: absolute !important;
+    bottom: -17px;
+    font-size: 12px !important;
+}
+
+.ruleIndicatorCnt {
+    text-align: center;
+}
+
+.ruleDescMainCnt {
+    position: relative;
+}
+
+.ruleDescCnt {
+    padding: 35px 20px;
+    background: #E0E0E0;
+    border-radius: 4px;
+    color: #000;
+    margin-bottom: 5px !important;
+    position: relative;
+}
+.ruleDescCnt .ruleDescCnt{
+    padding: 20px 20px;
+}
+.rulesIndicatorBtn {
+    height: 35px;
+    width: 75px;
+    border-radius: 4px;
+    font-size: 14px !important;
+    color: #FFF !important;
+    text-transform: capitalize !important;
+}
+.ruleCnt .addConditionBnt {
+    width: 100px !important;
+    position: absolute !important;
+    bottom: -17px;
+    font-size: 12px !important;
+}
+.ruleDescMainCnt .addGroupBnt {
+    width: 100px;
+    position: absolute !important;
+    bottom: -17px;
+    margin-left: 120px;
+    font-size: 12px !important;
+}
+
+.ruleDescCnt .ruleItems {
+    margin-right: 25px;
+    position: relative;
+}
+
+.ruleDescCnt .ruleItems .selectBox {
+    background-color: inherit;
+}
+
+.ruleItems .inputBox div:first-child {
+    height: 39px;
+}
+
+.ruleItems .ruleIconCnt .useField {
+    position: absolute;
+    top: -24px;
+    right: 86px;
+    cursor: pointer;
+    
+    padding: 1px 4px;
+    background: #000;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+    /*transform: rotate(-90deg);*/
+}
+
+.ruleItems .ruleIconCnt .useStatic {
+    position: absolute;
+    top: -24px;
+    right: 53px;
+    padding: 1px 4px;
+    background: #000;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ruleItems .ruleIconCnt .useStaticString {
+    position: absolute;
+    top: -24px;
+    right: 2px;
+    padding: 1px 4px;
+    background: #000;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ruleItems .ruleIconCnt .staticActive {
+    background: #6ABF4B;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 12px;
+    padding: 3px;
+    position: absolute;
+    right: 49px;
+    top: -34px;
+}
+
+.ruleItems .ruleIconCnt .staticStringActive {
+    background: #6ABF4B;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 12px;
+    padding: 3px;
+    position: absolute;
+    right: -10px;
+    top: -30px;
+}
+
+.ruleItems .ruleIconCnt .fieldActive {
+    background: #6ABF4B;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 12px;
+    padding: 3px;
+    position: absolute;
+    right: 82px;
+    top: -32px;
+}
+
+.saveFieldBtn.F3BD48 {
+    background-color: #F3BD48 !important;
+}
+
+
+.cancelFieldBtn {
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+    margin-right: 10px !important;
+    border-radius: 3px !important;
+    border: solid 2px #d5d5d5 !important;
+}
+
+.ruleCnt {
+    margin-top: 25px;
+    padding: 25px;
+    min-height: 100px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.09), 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+    color: rgba(175, 175, 181, 0.87) !important;
+}
+
+.ruleCnt .innerCnt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ruleCnt .formCtrl,
+.footerCnt .formCtrl {
+    width: 100%;
+    max-width: 336px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ruleCnt .inputBoxCnt,
+.ruleCnt .formCtrl {
+    margin-bottom: 25px;
+}
+
+.selectBox {
+    height: 39px;
+    background-color: #f5f7fb;
+    color: #646569 !important;
+    font-size: 14px !important;
+    padding-left: 10px;
+}
+
+.ruleCnt .divider {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+    border-color: #e8e8e8;
+    opacity: .3;
+}
+
+.ruleCnt .inputBoxCnt {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inputBoxCnt .inputBox {
+    margin-top: 7px;
+    max-width: 336px;
+    background-color: #f5f7fb;
+}
+
+.removeRuleBtn{
+    padding: 2px;
+    background: #000;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.removeRuleCriteriaBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    background: #000;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.footerCnt .formCtrl {
+    width: 100%;
+    max-width: 336px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tagCnt.Autocomplete{
+    padding-top: 5px;
+    display: inline-block;
+}
+.tagCnt.Autocomplete input {
+    width: 100% !important;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: inherit;
+    outline: none;
+}
+
+.Autocomplete div div {
+    z-index: 1 !important;
+}
+
+.Autocomplete .sugestions {
+    padding: 5px 10px !important;
+    background: #FFF !important;
+}
+.invalidFieldInfo{
+    padding-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    color: red;
+    width: 100%;
+}

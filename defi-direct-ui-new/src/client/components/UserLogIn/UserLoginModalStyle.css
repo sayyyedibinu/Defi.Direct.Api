@@ -1,0 +1,56 @@
+.ULM-Wrapper {
+    min-height: 100vh; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 50px !important;
+}
+.ULM-Wrapper.ULPC{
+    margin-top: 25px !important;
+}
+.ULM-Wrapper.ULPC .ULM-Header{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.ULM-Container {
+    background-color: #FFF;
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+.ULM-Mismatch .mismatchtext{
+    /* margin-left: auto !important;
+    margin-right: auto !important; */
+    padding-right: 20px;
+    text-align: left !important;
+}
+
+.ULM-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.ULM-CloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.ULPC .ULM-Footer{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.ULPC .ULM-Footer .insertBtn{
+    color: #FFF;
+    margin-left: 10px;
+}
+.Mismatchtxt{
+    margin-left: 22px;
+    text-align: left !important;
+}
+.ULM-Header
+{
+    margin-left: 22px;
+    text-align: left !important;
+}

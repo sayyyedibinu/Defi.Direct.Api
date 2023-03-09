@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  defi.direct.api:
+    image: defidirect
+    env_file:
+      - secrets.env
+    build:
+      context: .
+      dockerfile: Defi.Direct.Api/Dockerfile
+    depends_on:  # This tells Docker Compose the API service depends on the MySQL service
+      - defi.direct.docker.mysql
+    
+  defi.direct.docker.mysql:  # Our new MySQL service
+    image: mysql:8.0.11  # What Docker image to use
+    volumes:
+      - defi-direct-mysql:/var/lib/mysql  # Map our data volume
+    ports:
+      - 3307:3306  # Expose our ports
+    environment:
+      MYSQL_ROOT_PASSWORD: 'defidirect'  # Set our password
+
+volumes:
+  defi-direct-mysql:
+      # Because we created the Docker volume outside of Docker Compose, we have to explicitly let Compose know about it.
+

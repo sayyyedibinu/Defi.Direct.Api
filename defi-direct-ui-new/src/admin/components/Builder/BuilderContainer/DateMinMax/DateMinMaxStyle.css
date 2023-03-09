@@ -1,0 +1,173 @@
+.DMMC-Wrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 250px !important;
+}
+
+.DMMC-Container {
+    background-color: #FFF;
+    /*height: 45%; */
+    margin: 25px;
+    border-radius: 5px;
+    width:40%;
+    position: relative;
+    padding-bottom: 30px;
+}
+.DMMC-Date
+{
+    border:1px  solid rgb(209, 223, 224) !important;
+
+}
+
+.DMMC-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.lblTxt {
+    /*color: #CBCCD0;
+    font-size: 10px;
+    text-align: left;
+    padding-left: 25px;*/
+}
+.DMMCdivider {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: #E8E8E8;
+    opacity: .3;
+}
+
+.okButton {
+    min-height: 40px;
+    width: 120px;
+    padding: 20%;
+    /* padding-left: 80px;
+    padding-right: 25px; */
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #e8e9ef !important;    
+    background-color:  #00B2E3 !important;    
+    text-transform: capitalize !important;
+} 
+.okButton:hover {
+    background-color: #FFF !important;
+     color: #00B2E3 !important;
+ }
+.lblcustomise
+{
+    color: #606163;
+    font-size: 15px;    
+   
+}
+.cancelBtn:hover{
+    background: inherit;
+    border: 1px solid #969798 !important;
+}
+.cancelButton {
+    min-height: 40px;
+    width: 120px !important;
+    padding: 20%;   
+    border-radius: 5px;   
+    font-size: 18px;   
+    text-transform: capitalize !important;
+    color: #969798 !important;
+    box-shadow: none;
+    border: 1px solid #FFF !important; 
+   
+} 
+.DMMC-Select {
+    /*width: 100%;*/
+    text-align: left;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.DMMC-Text {
+    width: 80px;
+    text-align: left;
+    max-width: 300px;  
+}
+.selectDays {
+    /* height: 39px; */
+    width: 95px;
+    background-color: #FAFBFB;
+    font-size: 10px;
+}
+
+.errorMsg
+{
+    font-size: 10px;
+    /* max-width: 495px; */
+    text-align: left;
+    padding-left: 53px;
+    color: red;
+}
+
+.DMMC-Input {
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    /*margin-bottom: 8px;
+    margin-top: 25px;
+    margin-left: 10px;*/
+}
+input[type='radio'] {
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    border:1px solid #00B2E3;
+    border-radius:50%;
+    outline:none;
+    /* box-shadow:0 0 5px 0px #00B2E3 inset; */
+}
+input[type='radio']:hover {
+    box-shadow:0 0 5px 0px blue inset;
+}
+input[type='radio']:before {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;    
+    border-radius:50%;    
+}
+input[type='radio']:checked:before {
+    background:  #00B2E3;;
+}
+    
+/* .okButton {
+    background-color: rgb(255, 255, 255);
+    color: #00B2E3;
+} */
+
+ /* .okButton:hover {
+    background-color: #FFF;
+    color: #DB5E5E;
+    border: 1px solid #DB5E5E;
+} */
+.DMMC-Input-container{
+    position: relative;
+}
+.DMMC-Input-container .lblcustomise{
+    position: absolute;
+    width: 150px;
+    top: -7px;
+    margin-left: 5px;
+}
+.DMMC-Input-container .lblTxt{
+    position: absolute;
+    color: #CBCCD0;
+    font-size: 10px;
+    width: 150px;
+    margin-left: 30px;
+    margin-top: -5px;
+}

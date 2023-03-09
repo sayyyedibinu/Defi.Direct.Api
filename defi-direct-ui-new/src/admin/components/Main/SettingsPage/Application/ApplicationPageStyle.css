@@ -1,0 +1,55 @@
+.divider {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: -20px;
+    margin-right: -20px;
+    border-color: #e8e8e8;
+}
+
+.applicationPage .footerBtnCnt {
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.applicationPage .saveBtn {
+    border-radius: 4px;
+    background-color: #5DD36D;
+    color: #fff !important;
+    border: 0px !important;
+    height: 40px;
+    width: 140px;
+    margin-left: 10px;
+    text-transform: capitalize;
+    letter-spacing: .3px;
+    font-size: 14px;
+    top:20px;
+}
+
+.applicationPage .cancelBtn {
+    height: 40px;
+    width: 125px;
+    font-size: 14px;
+    text-transform: capitalize;
+    border-radius: 3px;
+  border: solid 2px #d5d5d5;
+  top:20px;
+}
+
+.rdw-editor-main {
+    border-radius: 2px;
+    background-color: #f5f7fb;
+    border: solid 1px #cccccb;
+}
+
+.applicationPage form label{
+    font-size: 14px !important;
+    color: #646569 !important;
+}
+.applicationPage form input{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px !important;
+    color: #646569 !important;
+    background-color: #f5f7fb;
+}

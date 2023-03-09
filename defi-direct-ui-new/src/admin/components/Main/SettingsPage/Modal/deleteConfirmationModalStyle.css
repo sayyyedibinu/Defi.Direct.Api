@@ -1,0 +1,100 @@
+.disableModalWrapper {
+    min-height: 275px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 125px !important;
+}
+
+.disableModalContainer {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.disableModalCloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.disableModalCloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.disableModalHeader1,
+.disableModalHeader2 {
+    text-align: center;
+}
+
+.disableModalHeader1 {
+    margin-bottom: 8px;
+    margin-top: 25px;
+}
+
+.disableModalHeader2 {
+    margin: 0;
+    font-size: 14px;
+    color: #969798;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createModalTitleBox {
+    padding: 25px 50px;
+}
+
+.createModalTitleBox label,
+.createModalTitleBox input {
+    color: #969798;
+    font-size: 18px;
+}
+
+.createModalTitleBox input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px
+}
+
+.disableModalFooter {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+.disableModalFooter button {
+    min-height: 40px;
+    max-width: 267px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.disableModalFooter .okayBtn {
+    background-color: #00B2E3;
+    color: #FFF;
+}
+
+.disableModalFooter .okayBtn:hover {
+    background-color: #FFF;
+    color: #00B2E3;
+}
+
+.disableModalFooter .cencelBtn {
+    background-color: #FFF;
+    color: #969798;
+    margin-right: 20px;
+}
+
+.disableModalFooter .cencelBtn:hover {
+    background-color: #969798;
+    color: #FFF;
+}

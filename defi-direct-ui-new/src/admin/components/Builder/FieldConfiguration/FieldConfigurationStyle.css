@@ -1,0 +1,132 @@
+.FC-Wrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 20px !important;
+    overflow: auto;
+}
+.FC-Wrapper .required{
+    color: #DB5E5E !important;
+}
+.FC-Container {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+    padding: 25px;
+}
+
+.FC-CloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.FC-CloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.FC-Header {
+    margin-bottom: 8px;
+    margin-top: 0px;
+    text-align: center;
+    color: #646569;
+    font-size: 24px;
+}
+.FC-Body{
+    width: 100%;
+    margin-bottom: 30px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+.DisplayLogic{
+    
+}
+.FC-Footer {
+    width: 100%;
+    text-align: center;
+}
+
+.FC-Footer button {
+    min-height: 40px;
+    width: 267px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.FC-Footer .cancelBtn {
+    box-shadow: none;
+    border: solid 2px #d5d5d5;
+    border-radius: 3px;
+    width: 130px;
+    font-size: 14px;
+    background: #FFF;
+    margin-right: 20px;
+    top: 0px;
+}
+.FC-Footer .cancelBtn:hover{
+   /* background: inherit;
+    border: 1px solid #969798;*/
+}
+.FC-Body .toggleBtn1{
+    margin-left: 60px !important;   
+}
+.FC-Body .toggleBtn2{
+    margin-left: 88px !important;   
+}
+
+.FC-Footer .saveBtn {
+    border-radius: 4px;
+    color: #FFF;
+     border-radius: 3px;
+    width: 130px;
+    font-size: 14px;
+    box-shadow: none;
+    top: 0px;
+}
+.FC-Footer .saveBtn:hover {
+    /*background-color: #FFF;
+    color: #00B2E3;*/
+}
+.fieldWidthCnt{
+    text-align: center;
+}
+.fieldWidthBtn{
+    height: 39px !important;	
+    width: 141px !important;
+    margin-right: 10px !important;
+    border: 2px solid #00B2E3 !important;
+    background-color: rgba(0,178,227,0.25) !important;
+    color: #00B2E3 !important;
+    border-radius: 0px !important;
+}
+.fieldWidthCnt .fieldWidthBtn:first-child{
+    border-radius: 5px 0 0 5px !important;
+}
+.fieldWidthCnt .fieldWidthBtn:last-child{
+    border-radius: 0 5px 5px 0 !important;
+}
+.fieldWidthBtn:hover{
+    color: #FFF !important;
+    background-color: #00B2E3 !important;
+}
+.fieldWidthBtn.selected{
+    color: #FFF !important;
+    background-color: #00B2E3 !important;
+}
+.FC-Body label{
+    font-size: 14px;
+    color: #646569;
+}
+.FC-Body input{
+    font-size: 14px;
+    color: #646569;
+    padding-left: 5px;
+}

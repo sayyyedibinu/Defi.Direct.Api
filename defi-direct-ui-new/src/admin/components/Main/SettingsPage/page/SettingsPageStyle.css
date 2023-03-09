@@ -1,0 +1,66 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.settingsPageWrapper {
+    padding-top: 25px;
+    margin-top: 80px;
+    margin-bottom: 35px;
+}
+
+.headerRowCnt {}
+
+.breadCrumbCnt {
+    font-size: 16px;
+}
+
+.breadCrumbCnt span {
+    color: #646569;
+}
+
+.breadCrumbCnt span:first-child {
+    color: #969798;
+    -webkit-text-stroke: .5px #979797;
+}
+
+.headerBtnCnt button {
+    float: right;
+
+    text-transform: capitalize;
+    /*    font-weight: 600;*/
+    border-radius: 4px;
+    color: #FFF;
+    letter-spacing: 1px;
+    height: 40px;
+    width: 150px;
+}
+
+.headerBtnCnt button.edit {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.headerBtnCnt button.delete {
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    font-size: 14px;
+    background-color: #FFF;
+}
+
+.settingMainCnt {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 2px 0 rgba(0, 0, 0, 0.09);
+}
+
+.tabCnt {
+    color: #161a2e !important;
+    font-size: 16px !important;
+    text-transform: capitalize !important;
+}
+
+div[role="tablist"]{
+    overflow: auto;
+}

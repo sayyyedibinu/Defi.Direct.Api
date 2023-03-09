@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  defi.direct.ui:
+    image: defidirect.ui
+    env_file:
+      - secrets.env
+    build:
+      context: .
+      dockerfile: Dockerfile

@@ -1,0 +1,31 @@
+# NOTE: the ingress route for the API (WebApi project) is defined
+# in the YAML file that defines the WebApi's deployment
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: defi-directui-prod-ext-ingress-wildcard
+  namespace: prod
+  labels:
+    app: defi-directui
+    tier: api
+  annotations:
+    kubernetes.io/ingress.class: nlb
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-body-size: 25m
+spec:
+  tls:
+    - hosts:
+      - "*.defidirect.com"
+      secretName: star-defidirect-com-cert
+  rules:
+  - host: "*.defidirect.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: defi-directui-prod
+            port:
+              number: 80

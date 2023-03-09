@@ -1,0 +1,96 @@
+.SCModal .modalWrapper {
+    min-height: 100vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /*margin-top: 45px !important;*/
+}
+
+.SCModal .modalContainer {
+    background-color: #FFF;
+    margin: 25px;
+    border-radius: 5px;
+    /* position: relative; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SCModal .modalCloseBtn {
+    position: absolute;
+    right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 25px;
+}
+
+.SCModal .modalCloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.SCModal .modalHeader1 {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 25px;
+    font-size: 24px;
+    color: #646569;
+}
+
+.SCModal-body {
+    text-align: center;
+    padding: 25px;
+}
+
+.SCModal-body .compCnt {
+    display: inline-block;
+    height: 200px;
+    /*width: 135px;*/
+    width: 90%;
+    max-width: 200px;
+    color: #FFF;
+    border: 2px solid #00B2E3;
+    border-radius: 5px;
+    background-color: #00B2E3;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.SCModal-body .compCnt:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.compCnt .iconCnt {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-color: #FFF;
+    /*background-color: rgba(38, 76, 89, 0.5);*/
+    border-radius: 50%;
+    margin-top: 23px;
+}
+
+.compCnt .iconCnt img {
+    width: 40px;
+    margin-top: 25px;
+}
+
+.compCnt .iconCnt i {
+    font-size: 51px;
+    margin-top: 20px;
+    color: #FFF;
+}
+
+.compCnt h3 {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.compCnt p {
+    opacity: 0.75;
+    color: #FFFFFF;
+    font-size: 11px;
+    margin: 0;
+    margin-top: 3px;
+}

@@ -1,0 +1,27 @@
+version: '3.2'
+
+services:
+  defi.direct.ui.jenkins:
+    image: boogak/jenkins_lts_updated_docker   # This is a public image I created that has Jenkins LTS image with latest Docker installed
+    ports:
+      - 8080:8080
+    volumes:
+      - type: volume                  # Map the Jenkins data directory to a Docker volume
+        source: defi.direct.ui.jenkins
+        target: /var/jenkins_home
+      - type: bind                    # Map the Docker socket so we can use Docker commands in the Jenkins container
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+      - type: bind
+        source: C:\Projects\Defi-Direct/defi-direct-ui  # Change this line to your local folder that contains the local Git repo for this project
+        target: /tmp/gitrepo/defi-direct.ui
+
+  defi.direct.ui.registry:
+    image: registry:2.6.2
+    ports:
+      - 5000:5000
+     
+volumes:
+  defi.direct.ui.jenkins:
+    external: true
+

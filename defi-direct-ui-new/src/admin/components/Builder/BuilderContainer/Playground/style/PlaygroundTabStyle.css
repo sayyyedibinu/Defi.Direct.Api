@@ -1,0 +1,20 @@
+.tabMode{
+    /*background: blue;*/
+}
+.tabMode .mobileNavBar{
+    display: none;
+}
+.tabMode .progressBarCnt{
+    display: none;
+}
+.tabMode .stepsCnt{
+    width: 35%;
+    display: inline-block;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+.tabMode  .componentsWrapper{
+    width: 55%;
+    margin-top: 80px;
+    padding: 20px;
+}

@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    /*background: #F5F5F5;*/
+    vertical-align: top;
+}
+
+.mainCnt {
+    position: relative;
+    top: 63px;
+}
+
+.personalLoanWrapper .mobileProgressBar {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 63px;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 6px 24px 0 rgba(0,0,0,0.07) !important;
+}
+
+.personalLoanWrapper .mobileStepperMenu{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: #FFF;
+}
+
+.personalLoanWrapper .formStepCnt {
+    max-width: 100%;
+    overflow: hidden;
+    /*background: #F5F5F5;*/
+}
+.mobileStepperMenu .formStepCnt{
+    background: #FFF;
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+}
+@media screen and (max-width: 960px) {
+    .personalLoanWrapper {
+        margin-top: 30px;
+    }
+}
+.alignLeft{
+    text-align: left !important;
+}
+
+.lg1 .headerCmp{
+    background-color: rgb(252, 252, 253) !important;
+    border-bottom: 2px solid #E8E8E8;
+}
+.lg1 .personalLoanWrapper, .lg1 .personalLoanWrapper .formStepCnt, .lg1 .formContainer-parent, .lg1 .footerContainer{
+    background-color: rgb(252, 252, 253) !important;
+}
+
+.lg2 .headerCmp{
+    background-color: rgb(229, 229, 229) !important;
+    border-bottom: 1px solid rgb(252, 252, 253, 0.3);
+}
+.lg2 .personalLoanWrapper, .lg2 .personalLoanWrapper .formStepCnt, .lg2 .formContainer-parent, .lg2 .footerContainer{
+    background-color: rgb(229, 229, 229) !important;
+}
+
+.lg3 .headerCmp{
+    background-color: rgb(232, 232, 232) !important;
+    border-bottom: 1px solid rgb(252, 252, 253, 0.3);
+}
+.lg3 .personalLoanWrapper, .lg3 .personalLoanWrapper .formStepCnt, .lg3 .formContainer-parent, .lg3 .footerContainer{
+    background-color: rgb(232, 232, 232) !important;
+}
+
+.lg4 .headerCmp{
+    background-color: rgb(223, 223, 223) !important;
+    border-bottom: 1px solid rgb(252, 252, 253, 0.3);
+}
+.lg4 .personalLoanWrapper, .lg4 .personalLoanWrapper .formStepCnt, .lg4 .formContainer-parent, .lg4 .footerContainer{
+    background-color: rgb(223, 223, 223) !important;
+}
+.clearTextTransform{
+    text-transform: none !important;
+}

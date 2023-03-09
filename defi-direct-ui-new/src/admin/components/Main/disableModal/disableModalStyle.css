@@ -1,0 +1,107 @@
+.disableModalWrapper {
+    min-height: 275px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 125px !important;
+}
+
+.disableModalContainer {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.disableModalCloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.disableModalCloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.disableModalHeader1,
+.disableModalHeader2 {
+    text-align: center;
+}
+
+.disableModalHeader1 {
+    margin-bottom: 8px;
+    margin-top: 25px;
+    color: #646569;
+    font-size: 24px;
+}
+
+.disableModalHeader2 {
+    margin: 0;
+    font-size: 14px;
+    color: #646569 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createModalTitleBox {
+    padding: 25px 50px;
+}
+
+.createModalTitleBox label,
+.createModalTitleBox input {
+    color: #969798;
+    font-size: 18px;
+}
+
+.createModalTitleBox input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px
+}
+
+.disableModalFooter {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+.disableModalFooter button {
+    min-height: 40px;
+    max-width: 267px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.disableModalFooter .okayBtn {
+    background-color: #00B2E3;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.disableModalFooter .okayBtn:hover {
+    color: #FFF !important;
+    background-color: #7ad259 !important;
+}
+
+.disableModalFooter .cencelBtn {
+    background-color: #FFF;
+    color: #969798;
+    margin-right: 20px;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+    font-size: 14px;
+}
+
+.disableModalFooter .cencelBtn:hover {
+    background-color: #d5d5d5 !important;
+    /*background-color: #969798;
+    color: #FFF;*/
+}

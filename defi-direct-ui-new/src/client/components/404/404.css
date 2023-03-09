@@ -1,0 +1,16 @@
+.notFoundWrapper{
+    text-align: center;
+    margin-top: 50px;
+}
+.notFoundWrapper .title1{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.notFoundWrapper .subTitle1{
+    font-size: 18px;
+    color: #B3B3B3;
+    padding-top: 10px;
+    max-width: 450px;
+    margin: auto;
+    letter-spacing: .2px;
+}

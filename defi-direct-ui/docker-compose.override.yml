@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  defi.direct.ui:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

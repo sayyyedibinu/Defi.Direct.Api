@@ -1,0 +1,108 @@
+.createModalWrapper {
+    min-height: 275px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 125px !important;
+}
+
+.createModalContainer {
+    background-color: #FFF;
+    /*height: 100%;*/
+    margin: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.createModalCloseBtn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.createModalCloseBtn i {
+    color: #969798;
+    font-size: 32px;
+}
+
+.createModalHeader1,
+.createModalHeader2 {
+    text-align: center;
+}
+
+.createModalHeader1 {
+    margin-bottom: 8px;
+    margin-top: 25px;
+    color: #646569;
+    font-size: 24px;
+  font-weight: bold;
+}
+
+.createModalHeader2 {
+    margin: 0;
+    font-size: 14px;
+    color: #646569 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createModalTitleBox {
+    padding: 25px 50px;
+}
+
+.createModalTitleBox label,
+.createModalTitleBox input {
+    color: #646569;
+    font-size: 14px;
+}
+
+.createModalTitleBox input {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    color: #989898 !important;
+    font-size: 14px !important;
+    background-color: #f5f7fb;
+}
+
+.createModalFooter {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.createModalFooter.fullWidth {
+    width: 100%;
+}
+
+.createModalFooter button {
+    min-height: 40px;
+    max-width: 267px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    /*letter-spacing: .8px;*/
+}
+
+.createModalFooter .startBtn {
+    background-color: #00B2E3;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.createModalFooter .startBtn:hover {
+    background-color: #7ad259 !important;
+}
+
+.createModalFooter .finishBtn {
+    background-color: #FFF;
+    font-size: 14px;
+    border-radius: 3px;
+    border: solid 2px #d5d5d5;
+}
+
+.createModalFooter .finishBtn:hover {
+    border: solid 2px #6abf4b;
+}

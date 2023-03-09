@@ -1,0 +1,89 @@
+# NOTE: the ingress route for the API (WebApi project) is defined
+# in the YAML file that defines the WebApi's deployment
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: defi-directui-qa-ext-ingress-wildcard
+  namespace: qa
+  labels:
+    app: defi-directui
+    tier: api
+  annotations:
+    kubernetes.io/ingress.class: nlb
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-body-size: 25m
+spec:
+  tls:
+    - hosts:
+      - "*.qa.defidirect.com"
+      secretName: star-qa-defidirect-com-cert
+  rules:
+  - host: "*.qa.defidirect.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: defi-directui-qa
+            port:
+              number: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: defi-directui-qa-ext-ingress-baseline
+  namespace: qa
+  labels:
+    app: defi-directui
+    tier: api
+  annotations:
+    kubernetes.io/ingress.class: nlb
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+    - hosts:
+      - baseline-qa.defidirect.com
+      secretName: star-qa-defidirect-com-cert
+  rules:
+  - host: baseline-qa.defidirect.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: defi-directui-qa
+            port:
+              number: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: defi-directui-qa-ext-ingress-demonew
+  namespace: qa
+  labels:
+    app: defi-directui
+    tier: api
+  annotations:
+    kubernetes.io/ingress.class: nlb
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+    - hosts:
+      - demonew-qa.defidirect.com
+      secretName: star-qa-defidirect-com-cert
+  rules:
+  - host: demonew-qa.defidirect.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: defi-directui-qa
+            port:
+              number: 80

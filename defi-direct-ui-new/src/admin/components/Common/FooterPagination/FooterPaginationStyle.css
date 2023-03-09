@@ -1,0 +1,45 @@
+.paginationWrapper {
+    width: calc(100% - 100px);
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+    color: #646569;
+    height: 49px;
+    font-size: 14px;
+}
+.paginationWrapper .rowsPer{
+    float: right;
+    margin-top: 17px;
+}
+.paginationWrapper .rowsPer select{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0px;
+    color: #161A2E;
+}
+.pagination {
+    text-decoration: none;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 9px;
+    padding-left: 0px;
+}
+
+.pagination li {
+    float: left;
+    list-style-type: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    color: #35455F;
+    margin-top: 2px;
+}
+.pagination li.previous, .pagination li.next{
+    margin-top: -1px
+}
+.pagination li.active {
+    color: #FFF;
+    border-radius: 2px;
+    background-color: #00B3E3;
+}

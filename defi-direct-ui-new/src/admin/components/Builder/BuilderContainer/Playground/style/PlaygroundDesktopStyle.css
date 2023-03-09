@@ -1,0 +1,46 @@
+.desktopMode{
+    /*background: red;*/
+}
+.desktopMode .mobileNavBar{
+    display: none;
+}
+.desktopMode .progressBarCnt{
+    display: none;
+}
+.desktopMode .stepsCnt{
+    width: 25%;
+    margin-left: 10%;
+    margin-top:23px;
+    display: inline-block;
+    padding-top: 50px;
+}
+.desktopMode  .componentsWrapper{
+    width: 50%;
+    margin-top: 80px;
+    margin-bottom: 85px;
+    padding: 20px;
+}
+
+/*
+@media screen and (min-width: 1400px) {
+  .desktopMode .stepsCnt{
+        width: 20%;
+    }
+}*/
+
+@media screen and (min-width: 1600px) {
+  .desktopMode .stepsCnt{
+        width: 20%;
+    }
+    .desktopMode  .componentsWrapper{
+        width: 55%;
+    }
+}
+@media screen and (min-width: 1900px) {
+  .desktopMode .stepsCnt{
+        width: 15%;
+    }
+    .desktopMode  .componentsWrapper{
+        width: 60%;
+    }
+}

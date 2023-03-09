@@ -1,0 +1,8 @@
+version: '3'  # This version could be different depending on what updates you have installed to Visual Studio, make sure it matches your other `docker-compose` files.
+
+services:
+  defi.direct.ui:
+    image: defi.direct.ui:local   # Give it a unique image name
+    build:   # Build time configuration options
+      context: defi.direct.ui/bin/Debug/netcoreapp2.0/publish  # The build context directory to use.  This is the dotnet core publish directory that contains our published bits.
+      dockerfile: Dockerfile.deployment # The name of the Dockerfile to use, recall that we explicitly copy this file to the output directory on every publish
